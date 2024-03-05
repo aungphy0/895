@@ -43,9 +43,10 @@ const ParallelCoordinatePlot = ({data, width, height, FROM_VARIABLES, TO_VARIABL
     if (!d) {
       return <></>;
     }
-
-    return <path key={i} d={d} stroke="skyblue" fill="none" onClick={(d) => {
-                                            console.log("clicked data index: ", d)}}
+    
+    
+    return <path key={i} d={d} stroke="skyblue" fill="none" onClick={(d) => {console.log("clicked", 
+                                                              data[d['target']['__reactFiber$v51kg04fwtf']['alternate']['index']])}}
     />;
   });
 
