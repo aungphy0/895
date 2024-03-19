@@ -3,7 +3,7 @@ import AxisVerticalWide from './AxisVerticalWide';
 
 const MARGIN = { top: 60, right: 40, bottom: 30, left: 250 };
 
-const ParallelCoordinateWide = ({data, width, height, FROM_VARIABLES, TO_VARIABLES}) => {
+const ParallelCoordinateWide = ({data, width, height, FROM_VARIABLES, TO_VARIABLES, START, END}) => {
   const boundsWidth = width - MARGIN.right - MARGIN.left;
   const boundsHeight = height - MARGIN.top - MARGIN.bottom;
   // const variables = Array.from({length: VARIABLES}, (_, index) => index); //Creates an array from 0 to VARIABLES

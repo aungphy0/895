@@ -70,7 +70,7 @@ def generate_alex_net(data, truth):
     preds=[]
     total_per=[]
     # for i in range (len(conv_image)):
-    for i in range(100):
+    for i in range(len(conv_image)):
         conv=conv_image[i]
 
         # print("********************************************")
@@ -275,7 +275,7 @@ def generate_mobile_net(data, truth):
     preds=[]
     total_per=[]
     # for i in range (len(conv_image)):
-    for i in range(100):
+    for i in range(len(conv_image)):
         conv=conv_image[i]
 
         _, indices = torch.sort(conv, descending=True)
@@ -464,7 +464,7 @@ def generate_shuffle_net(data, truth):
     total_per=[]
 
     # for i in range (len(conv_image)):
-    for i in range(100):
+    for i in range(len(conv_image)):
         conv=conv_image[i]
 
         _, indices = torch.sort(conv, descending=True)
@@ -622,7 +622,7 @@ def generate_squeeze1_0_net(data, truth):
     total_per = []
 
     # for i in range (len(conv_image)):
-    for i in range(100):
+    for i in range(len(conv_image)):
         conv=conv_image[i]
 
         _, indices = torch.sort(conv, descending=True)
@@ -748,7 +748,7 @@ def generate_squeeze1_1_net(data, truth):
     total_per=[]
 
     # for i in range (len(conv_image)):
-    for i in range(100):
+    for i in range(len(conv_image)):
         conv=conv_image[i]
 
         _, indices = torch.sort(conv, descending=True)
@@ -874,7 +874,7 @@ def generate_mnasnet0_5_net(data, truth):
     total_per=[]
 
     # for i in range (len(conv_image)):
-    for i in range(100):
+    for i in range(len(conv_image)):
         conv=conv_image[i]
 
         _, indices = torch.sort(conv, descending=True)
@@ -1028,6 +1028,7 @@ def fetch_alex():
     # filename = "Alex_Net_values.json"
     # filename = './image_json_files_alex/img7.json'
     filename = "Alexnet_values_one.json"
+    # filename = "truth.json"
 
     try:
         with open(filename, 'r') as json_file:

@@ -1,502 +1,1314 @@
 [
     {
         "image_name": "img0.jpg",
-        "accuracy": 0.00011995209206361324,
-        "max": 0.059868503361940384
+        "accuracy": 0.00010146232671104372
     },
     {
         "image_name": "img1.jpg",
-        "accuracy": 0.00010270274651702493,
-        "max": 0.24325023591518402
+        "accuracy": 2.3965342279552715e-06
     },
     {
         "image_name": "img2.jpg",
-        "accuracy": 8.205467565858271e-06,
-        "max": 0.5171969532966614
+        "accuracy": 2.368945786201948e-07
     },
     {
         "image_name": "img3.jpg",
-        "accuracy": 1.9126206694808356e-12,
-        "max": 0.5958104729652405
+        "accuracy": 4.952416948755811e-12
     },
     {
         "image_name": "img4.jpg",
-        "accuracy": 5.42732074559904e-11,
-        "max": 0.8634617924690247
+        "accuracy": 5.318647777784787e-15
     },
     {
         "image_name": "img5.jpg",
-        "accuracy": 4.445861647578431e-12,
-        "max": 0.9524503350257874
+        "accuracy": 1.0098426001664551e-12
     },
     {
         "image_name": "img6.jpg",
-        "accuracy": 4.5098222472006455e-06,
-        "max": 0.747610867023468
+        "accuracy": 1.3291235063661588e-06
     },
     {
         "image_name": "img7.jpg",
-        "accuracy": 0.0014951011398807168,
-        "max": 0.17112469673156738
+        "accuracy": 1.5670255379518494e-05
     },
     {
         "image_name": "img8.jpg",
-        "accuracy": 1.494776924459984e-08,
-        "max": 0.7132295370101929
+        "accuracy": 6.818308065703604e-06
     },
     {
         "image_name": "img9.jpg",
-        "accuracy": 1.0055304679179589e-11,
-        "max": 0.9518118500709534
+        "accuracy": 3.7645119660423276e-11
     },
     {
         "image_name": "img10.jpg",
-        "accuracy": 4.0618153285265635e-10,
-        "max": 0.28063949942588806
+        "accuracy": 7.958456116341495e-10
     },
     {
         "image_name": "img11.jpg",
-        "accuracy": 3.891450006676678e-08,
-        "max": 0.4955868422985077
+        "accuracy": 8.302362743961567e-07
     },
     {
         "image_name": "img12.jpg",
-        "accuracy": 1.0257201754626522e-09,
-        "max": 0.8228265643119812
+        "accuracy": 4.704800460331171e-07
     },
     {
         "image_name": "img13.jpg",
-        "accuracy": 3.5066999217597816e-12,
-        "max": 0.9813925623893738
+        "accuracy": 2.6929988905521896e-08
     },
     {
         "image_name": "img14.jpg",
-        "accuracy": 3.2857933547347784e-06,
-        "max": 0.09589853882789612
+        "accuracy": 2.198305310230353e-06
     },
     {
         "image_name": "img15.jpg",
-        "accuracy": 3.3219706097042945e-08,
-        "max": 0.4913337528705597
+        "accuracy": 1.3985179680986448e-09
     },
     {
         "image_name": "img16.jpg",
-        "accuracy": 9.255975783162285e-06,
-        "max": 0.5196335911750793
+        "accuracy": 1.3517049524125468e-07
     },
     {
         "image_name": "img17.jpg",
-        "accuracy": 5.704054728994379e-06,
-        "max": 0.10098080337047577
+        "accuracy": 1.2145580967626302e-06
     },
     {
         "image_name": "img18.jpg",
-        "accuracy": 2.755685954980436e-07,
-        "max": 0.1563347429037094
+        "accuracy": 3.46702435649604e-08
     },
     {
         "image_name": "img19.jpg",
-        "accuracy": 1.594522558434619e-08,
-        "max": 0.25975415110588074
+        "accuracy": 2.3813313987375295e-07
     },
     {
         "image_name": "img20.jpg",
-        "accuracy": 9.175133186545281e-08,
-        "max": 0.256207138299942
+        "accuracy": 1.3366805262648995e-07
     },
     {
         "image_name": "img21.jpg",
-        "accuracy": 3.31396819319707e-07,
-        "max": 0.22571367025375366
+        "accuracy": 5.208297082504032e-08
     },
     {
         "image_name": "img22.jpg",
-        "accuracy": 1.3890584238396286e-09,
-        "max": 0.9631796479225159
+        "accuracy": 3.414538207735518e-09
     },
     {
         "image_name": "img23.jpg",
-        "accuracy": 1.1931759580363632e-08,
-        "max": 0.384108304977417
+        "accuracy": 6.579930822425695e-09
     },
     {
         "image_name": "img24.jpg",
-        "accuracy": 7.149671077399944e-09,
-        "max": 0.9523060917854309
+        "accuracy": 1.2653485204072723e-10
     },
     {
         "image_name": "img25.jpg",
-        "accuracy": 4.3421142237320964e-09,
-        "max": 0.2748737037181854
+        "accuracy": 7.038865934561045e-09
     },
     {
         "image_name": "img26.jpg",
-        "accuracy": 1.2697832368901985e-11,
-        "max": 0.5634896755218506
+        "accuracy": 3.973659509076688e-13
     },
     {
         "image_name": "img27.jpg",
-        "accuracy": 4.6379480811431506e-10,
-        "max": 0.9856821894645691
+        "accuracy": 1.706859098504765e-09
     },
     {
         "image_name": "img28.jpg",
-        "accuracy": 4.3128160598371323e-08,
-        "max": 0.9018077850341797
+        "accuracy": 3.6015629367724955e-10
     },
     {
         "image_name": "img29.jpg",
-        "accuracy": 2.584861213961176e-10,
-        "max": 0.11268913745880127
+        "accuracy": 3.977582707648253e-08
     },
     {
         "image_name": "img30.jpg",
-        "accuracy": 9.596341215001303e-07,
-        "max": 0.5278036594390869
+        "accuracy": 1.0175980058590994e-08
     },
     {
         "image_name": "img31.jpg",
-        "accuracy": 2.9563029784185346e-06,
-        "max": 0.06759538501501083
+        "accuracy": 1.6087965093447565e-07
     },
     {
         "image_name": "img32.jpg",
-        "accuracy": 3.8239352656566084e-11,
-        "max": 0.6321046948432922
+        "accuracy": 5.710866890495936e-09
     },
     {
         "image_name": "img33.jpg",
-        "accuracy": 7.4689393396183e-14,
-        "max": 0.522206723690033
+        "accuracy": 3.5556038668893564e-10
     },
     {
         "image_name": "img34.jpg",
-        "accuracy": 5.468153290166811e-07,
-        "max": 0.4991719126701355
+        "accuracy": 1.0130794814156019e-10
     },
     {
         "image_name": "img35.jpg",
-        "accuracy": 5.655004464699687e-09,
-        "max": 0.182615727186203
+        "accuracy": 4.12294625107279e-08
     },
     {
         "image_name": "img36.jpg",
-        "accuracy": 1.262664195422758e-09,
-        "max": 0.5002667903900146
+        "accuracy": 6.968945975849294e-10
     },
     {
         "image_name": "img37.jpg",
-        "accuracy": 1.0242019905792876e-11,
-        "max": 0.9777812361717224
+        "accuracy": 2.3819715644357586e-10
     },
     {
         "image_name": "img38.jpg",
-        "accuracy": 5.837738825675842e-08,
-        "max": 0.8280071020126343
+        "accuracy": 7.366086907101277e-13
     },
     {
         "image_name": "img39.jpg",
-        "accuracy": 3.280089231338934e-07,
-        "max": 0.2616909444332123
+        "accuracy": 1.2743676336413046e-07
     },
     {
         "image_name": "img40.jpg",
-        "accuracy": 9.087535585150519e-11,
-        "max": 0.9974551796913147
+        "accuracy": 1.9881049931336214e-11
     },
     {
         "image_name": "img41.jpg",
-        "accuracy": 4.260661626176443e-06,
-        "max": 0.26656049489974976
+        "accuracy": 2.2971504165525403e-07
     },
     {
         "image_name": "img42.jpg",
-        "accuracy": 3.931748778995825e-06,
-        "max": 0.16737134754657745
+        "accuracy": 3.941483726066508e-07
     },
     {
         "image_name": "img43.jpg",
-        "accuracy": 9.880774670678605e-11,
-        "max": 0.4412232041358948
+        "accuracy": 5.966133836965426e-11
     },
     {
         "image_name": "img44.jpg",
-        "accuracy": 1.4926772044419022e-14,
-        "max": 0.4507279694080353
+        "accuracy": 3.0092937690351373e-12
     },
     {
         "image_name": "img45.jpg",
-        "accuracy": 1.5170067868552906e-08,
-        "max": 0.10752919316291809
+        "accuracy": 4.639349793222891e-09
     },
     {
         "image_name": "img46.jpg",
-        "accuracy": 1.0277206001774175e-06,
-        "max": 0.04930374026298523
+        "accuracy": 5.88059037909261e-07
     },
     {
         "image_name": "img47.jpg",
-        "accuracy": 0.0001353264378849417,
-        "max": 0.2536241412162781
+        "accuracy": 6.185007805470377e-05
     },
     {
         "image_name": "img48.jpg",
-        "accuracy": 1.1779196938732639e-05,
-        "max": 0.3693382740020752
+        "accuracy": 2.3791760384028748e-07
     },
     {
         "image_name": "img49.jpg",
-        "accuracy": 2.3212094220070867e-06,
-        "max": 0.7755979299545288
+        "accuracy": 1.1143505007638055e-09
     },
     {
         "image_name": "img50.jpg",
-        "accuracy": 4.40436132009836e-09,
-        "max": 0.9586893916130066
+        "accuracy": 2.2175397074164493e-09
     },
     {
         "image_name": "img51.jpg",
-        "accuracy": 1.3585592373299704e-10,
-        "max": 0.9853860139846802
+        "accuracy": 1.4335517217745064e-09
     },
     {
         "image_name": "img52.jpg",
-        "accuracy": 3.713798690796466e-08,
-        "max": 0.421639084815979
+        "accuracy": 2.7583247685925016e-08
     },
     {
         "image_name": "img53.jpg",
-        "accuracy": 3.6212966659902607e-16,
-        "max": 0.9777315258979797
+        "accuracy": 2.0945443425198548e-15
     },
     {
         "image_name": "img54.jpg",
-        "accuracy": 0.0004794145352207124,
-        "max": 0.18581894040107727
+        "accuracy": 1.3248219147499185e-05
     },
     {
         "image_name": "img55.jpg",
-        "accuracy": 2.275944825669285e-05,
-        "max": 0.08142948150634766
+        "accuracy": 9.846360882193039e-08
     },
     {
         "image_name": "img56.jpg",
-        "accuracy": 4.887419891019817e-07,
-        "max": 0.2785225212574005
+        "accuracy": 9.885185363600613e-07
     },
     {
         "image_name": "img57.jpg",
-        "accuracy": 2.1126122362602473e-07,
-        "max": 0.927389919757843
+        "accuracy": 5.039161310449458e-10
     },
     {
         "image_name": "img58.jpg",
-        "accuracy": 0.00010893597936956212,
-        "max": 0.701589822769165
+        "accuracy": 4.4294648504639156e-10
     },
     {
         "image_name": "img59.jpg",
-        "accuracy": 8.700264900879384e-13,
-        "max": 0.9639231562614441
+        "accuracy": 5.1460929267888034e-11
     },
     {
         "image_name": "img60.jpg",
-        "accuracy": 2.9203348628215053e-09,
-        "max": 0.9410610795021057
+        "accuracy": 1.6751712517137918e-10
     },
     {
         "image_name": "img61.jpg",
-        "accuracy": 1.0140995243546058e-07,
-        "max": 0.16785436868667603
+        "accuracy": 1.7074847091791412e-09
     },
     {
         "image_name": "img62.jpg",
-        "accuracy": 0.0013892679708078504,
-        "max": 0.12327751517295837
+        "accuracy": 0.00014810304855927825
     },
     {
         "image_name": "img63.jpg",
-        "accuracy": 5.5391788378322815e-11,
-        "max": 0.47243809700012207
+        "accuracy": 3.627838654485238e-11
     },
     {
         "image_name": "img64.jpg",
-        "accuracy": 1.1126948321060759e-11,
-        "max": 0.9560064673423767
+        "accuracy": 3.171336457330476e-12
     },
     {
         "image_name": "img65.jpg",
-        "accuracy": 9.425990356248803e-06,
-        "max": 0.21805299818515778
+        "accuracy": 3.0297152989078313e-05
     },
     {
         "image_name": "img66.jpg",
-        "accuracy": 4.90083584736567e-06,
-        "max": 0.16168959438800812
+        "accuracy": 8.818371952656889e-07
     },
     {
         "image_name": "img67.jpg",
-        "accuracy": 1.5201454539592874e-09,
-        "max": 0.9877190589904785
+        "accuracy": 7.305192006867856e-10
     },
     {
         "image_name": "img68.jpg",
-        "accuracy": 5.9046371347903914e-08,
-        "max": 0.23231279850006104
+        "accuracy": 2.222738970658611e-07
     },
     {
         "image_name": "img69.jpg",
-        "accuracy": 1.1488422302363688e-07,
-        "max": 0.3660353720188141
+        "accuracy": 3.80689073153917e-07
     },
     {
         "image_name": "img70.jpg",
-        "accuracy": 2.4954720956316123e-08,
-        "max": 0.6017290353775024
+        "accuracy": 9.335332862292489e-08
     },
     {
         "image_name": "img71.jpg",
-        "accuracy": 6.427075316395303e-09,
-        "max": 0.1711873710155487
+        "accuracy": 1.5293325361653842e-07
     },
     {
         "image_name": "img72.jpg",
-        "accuracy": 5.859575321665034e-05,
-        "max": 0.6575356721878052
+        "accuracy": 5.219815193413524e-06
     },
     {
         "image_name": "img73.jpg",
-        "accuracy": 9.255235227101366e-07,
-        "max": 0.4866750240325928
+        "accuracy": 9.41841626911355e-09
     },
     {
         "image_name": "img74.jpg",
-        "accuracy": 0.00026489273295737803,
-        "max": 0.5335037112236023
+        "accuracy": 3.132889105472714e-05
     },
     {
         "image_name": "img75.jpg",
-        "accuracy": 8.339928682550568e-13,
-        "max": 0.5765992999076843
+        "accuracy": 5.505103664593669e-11
     },
     {
         "image_name": "img76.jpg",
-        "accuracy": 4.507980377876919e-10,
-        "max": 0.948603630065918
+        "accuracy": 2.210323124529623e-08
     },
     {
         "image_name": "img77.jpg",
-        "accuracy": 2.3362683315708566e-12,
-        "max": 0.5057106614112854
+        "accuracy": 1.649874898160264e-12
     },
     {
         "image_name": "img78.jpg",
-        "accuracy": 3.529166406224249e-06,
-        "max": 0.09470660239458084
+        "accuracy": 9.491654395787918e-08
     },
     {
         "image_name": "img79.jpg",
-        "accuracy": 9.584896361047868e-06,
-        "max": 0.09968247264623642
+        "accuracy": 4.841629197471775e-05
     },
     {
         "image_name": "img80.jpg",
-        "accuracy": 1.949136338441626e-11,
-        "max": 0.7585222125053406
+        "accuracy": 1.5908998226318687e-15
     },
     {
         "image_name": "img81.jpg",
-        "accuracy": 8.021058262031033e-10,
-        "max": 0.48211804032325745
+        "accuracy": 2.4250276453585684e-08
     },
     {
         "image_name": "img82.jpg",
-        "accuracy": 6.756139896424429e-07,
-        "max": 0.2683829367160797
+        "accuracy": 5.644279553962406e-06
     },
     {
         "image_name": "img83.jpg",
-        "accuracy": 4.321136330698305e-12,
-        "max": 0.5156022310256958
+        "accuracy": 2.3496196099870303e-09
     },
     {
         "image_name": "img84.jpg",
-        "accuracy": 2.163077851946582e-06,
-        "max": 0.297768235206604
+        "accuracy": 1.7210431906278245e-05
     },
     {
         "image_name": "img85.jpg",
-        "accuracy": 9.367519669467583e-05,
-        "max": 0.17179226875305176
+        "accuracy": 0.000568281626328826
     },
     {
         "image_name": "img86.jpg",
-        "accuracy": 2.1863494112039916e-05,
-        "max": 0.37020108103752136
+        "accuracy": 7.74250636936813e-08
     },
     {
         "image_name": "img87.jpg",
-        "accuracy": 7.490604184567928e-05,
-        "max": 0.5854852199554443
+        "accuracy": 2.8818769351346418e-05
     },
     {
         "image_name": "img88.jpg",
-        "accuracy": 7.610996277662707e-10,
-        "max": 0.9290823936462402
+        "accuracy": 2.1716490827827784e-09
     },
     {
         "image_name": "img89.jpg",
-        "accuracy": 1.8058658568520514e-08,
-        "max": 0.26346850395202637
+        "accuracy": 1.1455546733429856e-08
     },
     {
         "image_name": "img90.jpg",
-        "accuracy": 7.663968126792042e-09,
-        "max": 0.17825476825237274
+        "accuracy": 1.101125093327937e-07
     },
     {
         "image_name": "img91.jpg",
-        "accuracy": 4.17574438568713e-12,
-        "max": 0.8846880793571472
+        "accuracy": 3.655890590259503e-10
     },
     {
         "image_name": "img92.jpg",
-        "accuracy": 2.3763270746712806e-06,
-        "max": 0.9408301115036011
+        "accuracy": 3.9279730579266925e-09
     },
     {
         "image_name": "img93.jpg",
-        "accuracy": 4.655364982397714e-10,
-        "max": 0.438868910074234
+        "accuracy": 8.819878855037544e-11
     },
     {
         "image_name": "img94.jpg",
-        "accuracy": 1.6572913180690207e-11,
-        "max": 0.8955023884773254
+        "accuracy": 2.9362077005878895e-12
     },
     {
         "image_name": "img95.jpg",
-        "accuracy": 1.3200325156503823e-05,
-        "max": 0.1519678682088852
+        "accuracy": 3.642714929696922e-08
     },
     {
         "image_name": "img96.jpg",
-        "accuracy": 0.0003357251698616892,
-        "max": 0.9293184280395508
+        "accuracy": 1.1366890930730733e-06
     },
     {
         "image_name": "img97.jpg",
-        "accuracy": 1.2291004168218933e-05,
-        "max": 0.1691303253173828
+        "accuracy": 1.7010700048558647e-06
     },
     {
         "image_name": "img98.jpg",
-        "accuracy": 8.589717594986723e-07,
-        "max": 0.11012080311775208
+        "accuracy": 6.91354762238916e-06
     },
     {
         "image_name": "img99.jpg",
-        "accuracy": 4.283956175910042e-11,
-        "max": 0.48652371764183044
+        "accuracy": 3.1329816518876896e-09
+    },
+    {
+        "image_name": "img100.jpg",
+        "accuracy": 3.1894882290828264e-09
+    },
+    {
+        "image_name": "img101.jpg",
+        "accuracy": 5.912788836326399e-08
+    },
+    {
+        "image_name": "img102.jpg",
+        "accuracy": 1.2772509307978908e-06
+    },
+    {
+        "image_name": "img103.jpg",
+        "accuracy": 3.096380896749906e-05
+    },
+    {
+        "image_name": "img104.jpg",
+        "accuracy": 1.6799942841316806e-06
+    },
+    {
+        "image_name": "img105.jpg",
+        "accuracy": 1.441486598867999e-14
+    },
+    {
+        "image_name": "img106.jpg",
+        "accuracy": 2.0048087634449985e-08
+    },
+    {
+        "image_name": "img107.jpg",
+        "accuracy": 7.729361151120884e-09
+    },
+    {
+        "image_name": "img108.jpg",
+        "accuracy": 1.4468356823726936e-07
+    },
+    {
+        "image_name": "img109.jpg",
+        "accuracy": 1.8835038417819305e-06
+    },
+    {
+        "image_name": "img110.jpg",
+        "accuracy": 3.533952622092329e-05
+    },
+    {
+        "image_name": "img111.jpg",
+        "accuracy": 1.4670484915768611e-06
+    },
+    {
+        "image_name": "img112.jpg",
+        "accuracy": 1.7631304402576653e-11
+    },
+    {
+        "image_name": "img113.jpg",
+        "accuracy": 1.6070698105608017e-09
+    },
+    {
+        "image_name": "img114.jpg",
+        "accuracy": 1.0451253196208654e-08
+    },
+    {
+        "image_name": "img115.jpg",
+        "accuracy": 7.791802545398241e-07
+    },
+    {
+        "image_name": "img116.jpg",
+        "accuracy": 6.858860501779418e-07
+    },
+    {
+        "image_name": "img117.jpg",
+        "accuracy": 1.1022005530492152e-09
+    },
+    {
+        "image_name": "img118.jpg",
+        "accuracy": 2.620422212551432e-10
+    },
+    {
+        "image_name": "img119.jpg",
+        "accuracy": 6.108043931751794e-11
+    },
+    {
+        "image_name": "img120.jpg",
+        "accuracy": 4.360368403150128e-12
+    },
+    {
+        "image_name": "img121.jpg",
+        "accuracy": 2.1171333131064785e-08
+    },
+    {
+        "image_name": "img122.jpg",
+        "accuracy": 7.465316884634754e-13
+    },
+    {
+        "image_name": "img123.jpg",
+        "accuracy": 7.964077531133484e-14
+    },
+    {
+        "image_name": "img124.jpg",
+        "accuracy": 2.7576945171858824e-09
+    },
+    {
+        "image_name": "img125.jpg",
+        "accuracy": 0.0012762723490595818
+    },
+    {
+        "image_name": "img126.jpg",
+        "accuracy": 3.742678700291435e-08
+    },
+    {
+        "image_name": "img127.jpg",
+        "accuracy": 3.541511750526638e-09
+    },
+    {
+        "image_name": "img128.jpg",
+        "accuracy": 3.530881542701536e-07
+    },
+    {
+        "image_name": "img129.jpg",
+        "accuracy": 1.1741695260525375e-07
+    },
+    {
+        "image_name": "img130.jpg",
+        "accuracy": 0.040880877524614334
+    },
+    {
+        "image_name": "img131.jpg",
+        "accuracy": 9.176285509227e-09
+    },
+    {
+        "image_name": "img132.jpg",
+        "accuracy": 7.003601698585271e-09
+    },
+    {
+        "image_name": "img133.jpg",
+        "accuracy": 1.1157893595736823e-06
+    },
+    {
+        "image_name": "img134.jpg",
+        "accuracy": 3.1939523248425417e-10
+    },
+    {
+        "image_name": "img135.jpg",
+        "accuracy": 6.27931884267241e-09
+    },
+    {
+        "image_name": "img136.jpg",
+        "accuracy": 2.3366364843013798e-08
+    },
+    {
+        "image_name": "img137.jpg",
+        "accuracy": 2.9030498005511163e-09
+    },
+    {
+        "image_name": "img138.jpg",
+        "accuracy": 1.672385424589251e-10
+    },
+    {
+        "image_name": "img139.jpg",
+        "accuracy": 1.2954465944403637e-07
+    },
+    {
+        "image_name": "img140.jpg",
+        "accuracy": 2.5540071793561658e-11
+    },
+    {
+        "image_name": "img141.jpg",
+        "accuracy": 5.741273567672067e-10
+    },
+    {
+        "image_name": "img142.jpg",
+        "accuracy": 1.7709530673523655e-12
+    },
+    {
+        "image_name": "img143.jpg",
+        "accuracy": 6.51105125371032e-08
+    },
+    {
+        "image_name": "img144.jpg",
+        "accuracy": 3.6596545793798896e-09
+    },
+    {
+        "image_name": "img145.jpg",
+        "accuracy": 1.4596177599912608e-08
+    },
+    {
+        "image_name": "img146.jpg",
+        "accuracy": 0.00022762391017749906
+    },
+    {
+        "image_name": "img147.jpg",
+        "accuracy": 4.453182267383227e-09
+    },
+    {
+        "image_name": "img148.jpg",
+        "accuracy": 4.205752635044746e-09
+    },
+    {
+        "image_name": "img149.jpg",
+        "accuracy": 3.8171854566115826e-10
+    },
+    {
+        "image_name": "img150.jpg",
+        "accuracy": 4.650582870191489e-12
+    },
+    {
+        "image_name": "img151.jpg",
+        "accuracy": 7.703706046413572e-07
+    },
+    {
+        "image_name": "img152.jpg",
+        "accuracy": 1.7873852584671113e-06
+    },
+    {
+        "image_name": "img153.jpg",
+        "accuracy": 1.5087647318025137e-14
+    },
+    {
+        "image_name": "img154.jpg",
+        "accuracy": 8.873264505382394e-07
+    },
+    {
+        "image_name": "img155.jpg",
+        "accuracy": 1.5929478569542965e-10
+    },
+    {
+        "image_name": "img156.jpg",
+        "accuracy": 8.663276207521164e-10
+    },
+    {
+        "image_name": "img157.jpg",
+        "accuracy": 1.0852927714508076e-12
+    },
+    {
+        "image_name": "img158.jpg",
+        "accuracy": 2.1177380595677198e-12
+    },
+    {
+        "image_name": "img159.jpg",
+        "accuracy": 1.9775515589220277e-13
+    },
+    {
+        "image_name": "img160.jpg",
+        "accuracy": 9.721781680127606e-05
+    },
+    {
+        "image_name": "img161.jpg",
+        "accuracy": 6.623008348347059e-13
+    },
+    {
+        "image_name": "img162.jpg",
+        "accuracy": 2.41947174101087e-11
+    },
+    {
+        "image_name": "img163.jpg",
+        "accuracy": 1.9384123106647166e-07
+    },
+    {
+        "image_name": "img164.jpg",
+        "accuracy": 3.3124572382803308e-06
+    },
+    {
+        "image_name": "img165.jpg",
+        "accuracy": 1.5742269710017354e-09
+    },
+    {
+        "image_name": "img166.jpg",
+        "accuracy": 1.0344809453499693e-09
+    },
+    {
+        "image_name": "img167.jpg",
+        "accuracy": 7.959308589988723e-08
+    },
+    {
+        "image_name": "img168.jpg",
+        "accuracy": 4.569880918126046e-09
+    },
+    {
+        "image_name": "img169.jpg",
+        "accuracy": 1.4838760428736997e-11
+    },
+    {
+        "image_name": "img170.jpg",
+        "accuracy": 1.5708687683968492e-08
+    },
+    {
+        "image_name": "img171.jpg",
+        "accuracy": 8.624445602123387e-10
+    },
+    {
+        "image_name": "img172.jpg",
+        "accuracy": 1.4366145251187845e-06
+    },
+    {
+        "image_name": "img173.jpg",
+        "accuracy": 5.332276487024501e-07
+    },
+    {
+        "image_name": "img174.jpg",
+        "accuracy": 1.3591618108765857e-10
+    },
+    {
+        "image_name": "img175.jpg",
+        "accuracy": 1.4501728706761696e-09
+    },
+    {
+        "image_name": "img176.jpg",
+        "accuracy": 1.5782391152901402e-15
+    },
+    {
+        "image_name": "img177.jpg",
+        "accuracy": 1.7703420951420412e-07
+    },
+    {
+        "image_name": "img178.jpg",
+        "accuracy": 1.9421266372887658e-08
+    },
+    {
+        "image_name": "img179.jpg",
+        "accuracy": 2.1239864977928846e-08
+    },
+    {
+        "image_name": "img180.jpg",
+        "accuracy": 0.0008980713319033384
+    },
+    {
+        "image_name": "img181.jpg",
+        "accuracy": 8.658291335450485e-06
+    },
+    {
+        "image_name": "img182.jpg",
+        "accuracy": 1.4684882216897677e-06
+    },
+    {
+        "image_name": "img183.jpg",
+        "accuracy": 1.3585143676664302e-07
+    },
+    {
+        "image_name": "img184.jpg",
+        "accuracy": 2.8775561933258587e-09
+    },
+    {
+        "image_name": "img185.jpg",
+        "accuracy": 1.2642791702432987e-08
+    },
+    {
+        "image_name": "img186.jpg",
+        "accuracy": 9.011829860128273e-08
+    },
+    {
+        "image_name": "img187.jpg",
+        "accuracy": 6.241100969361923e-10
+    },
+    {
+        "image_name": "img188.jpg",
+        "accuracy": 4.0891819708122057e-07
+    },
+    {
+        "image_name": "img189.jpg",
+        "accuracy": 2.0922610432377864e-12
+    },
+    {
+        "image_name": "img190.jpg",
+        "accuracy": 3.212196947235263e-14
+    },
+    {
+        "image_name": "img191.jpg",
+        "accuracy": 5.469358299592386e-10
+    },
+    {
+        "image_name": "img192.jpg",
+        "accuracy": 2.4810235643712986e-08
+    },
+    {
+        "image_name": "img193.jpg",
+        "accuracy": 4.0698125425286946e-11
+    },
+    {
+        "image_name": "img194.jpg",
+        "accuracy": 5.416807280500535e-11
+    },
+    {
+        "image_name": "img195.jpg",
+        "accuracy": 5.174890294057377e-09
+    },
+    {
+        "image_name": "img196.jpg",
+        "accuracy": 9.525983557523432e-09
+    },
+    {
+        "image_name": "img197.jpg",
+        "accuracy": 1.4482411714311638e-08
+    },
+    {
+        "image_name": "img198.jpg",
+        "accuracy": 0.0006831592763774097
+    },
+    {
+        "image_name": "img199.jpg",
+        "accuracy": 5.524373736243149e-10
+    },
+    {
+        "image_name": "img200.jpg",
+        "accuracy": 4.401761088956846e-06
+    },
+    {
+        "image_name": "img201.jpg",
+        "accuracy": 1.9348298962995614e-07
+    },
+    {
+        "image_name": "img202.jpg",
+        "accuracy": 7.890184150483037e-08
+    },
+    {
+        "image_name": "img203.jpg",
+        "accuracy": 2.087145048790262e-06
+    },
+    {
+        "image_name": "img204.jpg",
+        "accuracy": 7.895845328675932e-07
+    },
+    {
+        "image_name": "img205.jpg",
+        "accuracy": 4.1458188206888735e-06
+    },
+    {
+        "image_name": "img206.jpg",
+        "accuracy": 5.479079163706047e-07
+    },
+    {
+        "image_name": "img207.jpg",
+        "accuracy": 6.417745225917315e-06
+    },
+    {
+        "image_name": "img208.jpg",
+        "accuracy": 4.8795573093229905e-06
+    },
+    {
+        "image_name": "img209.jpg",
+        "accuracy": 9.97571447669543e-08
+    },
+    {
+        "image_name": "img210.jpg",
+        "accuracy": 3.8233052140901336e-11
+    },
+    {
+        "image_name": "img211.jpg",
+        "accuracy": 4.951492232722898e-13
+    },
+    {
+        "image_name": "img212.jpg",
+        "accuracy": 2.356645781298461e-11
+    },
+    {
+        "image_name": "img213.jpg",
+        "accuracy": 4.506893989952854e-12
+    },
+    {
+        "image_name": "img214.jpg",
+        "accuracy": 5.071695454716973e-07
+    },
+    {
+        "image_name": "img215.jpg",
+        "accuracy": 2.375000995868959e-08
+    },
+    {
+        "image_name": "img216.jpg",
+        "accuracy": 3.016500160768487e-09
+    },
+    {
+        "image_name": "img217.jpg",
+        "accuracy": 3.273759041633184e-09
+    },
+    {
+        "image_name": "img218.jpg",
+        "accuracy": 1.7776334289010265e-06
+    },
+    {
+        "image_name": "img219.jpg",
+        "accuracy": 7.659057409288832e-15
+    },
+    {
+        "image_name": "img220.jpg",
+        "accuracy": 2.500600658095209e-06
+    },
+    {
+        "image_name": "img221.jpg",
+        "accuracy": 3.7050760965939844e-06
+    },
+    {
+        "image_name": "img222.jpg",
+        "accuracy": 0.0003602704091463238
+    },
+    {
+        "image_name": "img223.jpg",
+        "accuracy": 1.3360663686512453e-08
+    },
+    {
+        "image_name": "img224.jpg",
+        "accuracy": 2.850110591978705e-09
+    },
+    {
+        "image_name": "img225.jpg",
+        "accuracy": 6.792780782305385e-10
+    },
+    {
+        "image_name": "img226.jpg",
+        "accuracy": 6.000882876833202e-06
+    },
+    {
+        "image_name": "img227.jpg",
+        "accuracy": 0.0001923036325024441
+    },
+    {
+        "image_name": "img228.jpg",
+        "accuracy": 1.5860632252007179e-10
+    },
+    {
+        "image_name": "img229.jpg",
+        "accuracy": 4.5133627391003017e-10
+    },
+    {
+        "image_name": "img230.jpg",
+        "accuracy": 6.2827800739739814e-09
+    },
+    {
+        "image_name": "img231.jpg",
+        "accuracy": 1.2547124228490247e-08
+    },
+    {
+        "image_name": "img232.jpg",
+        "accuracy": 2.1947020911738946e-07
+    },
+    {
+        "image_name": "img233.jpg",
+        "accuracy": 1.1552334910902573e-07
+    },
+    {
+        "image_name": "img234.jpg",
+        "accuracy": 3.5775772744273127e-07
+    },
+    {
+        "image_name": "img235.jpg",
+        "accuracy": 2.2578461766897817e-08
+    },
+    {
+        "image_name": "img236.jpg",
+        "accuracy": 4.101753074792214e-05
+    },
+    {
+        "image_name": "img237.jpg",
+        "accuracy": 0.00630845595151186
+    },
+    {
+        "image_name": "img238.jpg",
+        "accuracy": 1.0154656282512775e-10
+    },
+    {
+        "image_name": "img239.jpg",
+        "accuracy": 2.8853295904557005e-16
+    },
+    {
+        "image_name": "img240.jpg",
+        "accuracy": 1.5007147746715077e-09
+    },
+    {
+        "image_name": "img241.jpg",
+        "accuracy": 7.3136334322043695e-06
+    },
+    {
+        "image_name": "img242.jpg",
+        "accuracy": 0.0004801776958629489
+    },
+    {
+        "image_name": "img243.jpg",
+        "accuracy": 0.0002545866882428527
+    },
+    {
+        "image_name": "img244.jpg",
+        "accuracy": 0.06573599576950073
+    },
+    {
+        "image_name": "img245.jpg",
+        "accuracy": 1.237491283490738e-13
+    },
+    {
+        "image_name": "img246.jpg",
+        "accuracy": 7.709894463310552e-14
+    },
+    {
+        "image_name": "img247.jpg",
+        "accuracy": 9.227949654411205e-11
+    },
+    {
+        "image_name": "img248.jpg",
+        "accuracy": 1.69080549561329e-09
+    },
+    {
+        "image_name": "img249.jpg",
+        "accuracy": 3.0755049115066546e-12
+    },
+    {
+        "image_name": "img250.jpg",
+        "accuracy": 1.2644257196825492e-07
+    },
+    {
+        "image_name": "img251.jpg",
+        "accuracy": 2.5622497287942914e-13
+    },
+    {
+        "image_name": "img252.jpg",
+        "accuracy": 1.0659636728860278e-08
+    },
+    {
+        "image_name": "img253.jpg",
+        "accuracy": 5.158737326205198e-10
+    },
+    {
+        "image_name": "img254.jpg",
+        "accuracy": 4.684129528698122e-09
+    },
+    {
+        "image_name": "img255.jpg",
+        "accuracy": 4.676728448949063e-10
+    },
+    {
+        "image_name": "img256.jpg",
+        "accuracy": 2.770294031506637e-06
+    },
+    {
+        "image_name": "img257.jpg",
+        "accuracy": 6.251750050978444e-08
+    },
+    {
+        "image_name": "img258.jpg",
+        "accuracy": 1.683757773207617e-06
+    },
+    {
+        "image_name": "img259.jpg",
+        "accuracy": 4.561028106309095e-07
+    },
+    {
+        "image_name": "img260.jpg",
+        "accuracy": 1.0967517027893336e-06
+    },
+    {
+        "image_name": "img261.jpg",
+        "accuracy": 5.5821146816015244e-05
+    },
+    {
+        "image_name": "img262.jpg",
+        "accuracy": 0.0015831028576940298
+    },
+    {
+        "image_name": "img263.jpg",
+        "accuracy": 4.1012016699371046e-11
+    },
+    {
+        "image_name": "img264.jpg",
+        "accuracy": 4.826144390790432e-07
+    },
+    {
+        "image_name": "img265.jpg",
+        "accuracy": 5.838002969937861e-09
+    },
+    {
+        "image_name": "img266.jpg",
+        "accuracy": 4.521428120796145e-09
+    },
+    {
+        "image_name": "img267.jpg",
+        "accuracy": 1.4559917872247752e-05
+    },
+    {
+        "image_name": "img268.jpg",
+        "accuracy": 4.114600099438398e-13
+    },
+    {
+        "image_name": "img269.jpg",
+        "accuracy": 6.634256806137273e-06
+    },
+    {
+        "image_name": "img270.jpg",
+        "accuracy": 1.3638263261783745e-11
+    },
+    {
+        "image_name": "img271.jpg",
+        "accuracy": 1.3782365385850426e-05
+    },
+    {
+        "image_name": "img272.jpg",
+        "accuracy": 2.7231972232755197e-09
+    },
+    {
+        "image_name": "img273.jpg",
+        "accuracy": 7.554265124554149e-08
+    },
+    {
+        "image_name": "img274.jpg",
+        "accuracy": 5.6313689128728583e-05
+    },
+    {
+        "image_name": "img275.jpg",
+        "accuracy": 1.6178299588887057e-08
+    },
+    {
+        "image_name": "img276.jpg",
+        "accuracy": 1.60750147415456e-07
+    },
+    {
+        "image_name": "img277.jpg",
+        "accuracy": 4.094811956179001e-08
+    },
+    {
+        "image_name": "img278.jpg",
+        "accuracy": 2.824284556224299e-11
+    },
+    {
+        "image_name": "img279.jpg",
+        "accuracy": 2.0753103058268607e-07
+    },
+    {
+        "image_name": "img280.jpg",
+        "accuracy": 6.018310155786466e-11
+    },
+    {
+        "image_name": "img281.jpg",
+        "accuracy": 1.1387667198103912e-10
+    },
+    {
+        "image_name": "img282.jpg",
+        "accuracy": 1.4682751542371975e-11
+    },
+    {
+        "image_name": "img283.jpg",
+        "accuracy": 5.331530772423321e-10
+    },
+    {
+        "image_name": "img284.jpg",
+        "accuracy": 7.458423567641148e-08
+    },
+    {
+        "image_name": "img285.jpg",
+        "accuracy": 1.8808032908879113e-10
+    },
+    {
+        "image_name": "img286.jpg",
+        "accuracy": 3.1468845307358606e-09
+    },
+    {
+        "image_name": "img287.jpg",
+        "accuracy": 1.1582396837184206e-06
+    },
+    {
+        "image_name": "img288.jpg",
+        "accuracy": 5.3148574430395e-10
+    },
+    {
+        "image_name": "img289.jpg",
+        "accuracy": 5.694697392755188e-05
+    },
+    {
+        "image_name": "img290.jpg",
+        "accuracy": 1.949971374415327e-05
+    },
+    {
+        "image_name": "img291.jpg",
+        "accuracy": 8.182965416381194e-09
+    },
+    {
+        "image_name": "img292.jpg",
+        "accuracy": 1.627033285878099e-09
+    },
+    {
+        "image_name": "img293.jpg",
+        "accuracy": 1.91695050943963e-08
+    },
+    {
+        "image_name": "img294.jpg",
+        "accuracy": 1.7831742749052637e-09
+    },
+    {
+        "image_name": "img295.jpg",
+        "accuracy": 1.882911890098947e-14
+    },
+    {
+        "image_name": "img296.jpg",
+        "accuracy": 1.7158182860632643e-11
+    },
+    {
+        "image_name": "img297.jpg",
+        "accuracy": 0.016924794763326645
+    },
+    {
+        "image_name": "img298.jpg",
+        "accuracy": 2.0051762472661494e-09
+    },
+    {
+        "image_name": "img299.jpg",
+        "accuracy": 2.023281922447495e-05
+    },
+    {
+        "image_name": "img300.jpg",
+        "accuracy": 2.968801352215382e-14
+    },
+    {
+        "image_name": "img301.jpg",
+        "accuracy": 3.119619805147522e-06
+    },
+    {
+        "image_name": "img302.jpg",
+        "accuracy": 4.2105733655262156e-07
+    },
+    {
+        "image_name": "img303.jpg",
+        "accuracy": 8.710175620763039e-07
+    },
+    {
+        "image_name": "img304.jpg",
+        "accuracy": 9.138193313162901e-09
+    },
+    {
+        "image_name": "img305.jpg",
+        "accuracy": 3.333200143847137e-13
+    },
+    {
+        "image_name": "img306.jpg",
+        "accuracy": 1.2801687487851154e-10
+    },
+    {
+        "image_name": "img307.jpg",
+        "accuracy": 4.4156629849974316e-13
+    },
+    {
+        "image_name": "img308.jpg",
+        "accuracy": 2.3603579091258098e-09
+    },
+    {
+        "image_name": "img309.jpg",
+        "accuracy": 9.067016581987275e-10
+    },
+    {
+        "image_name": "img310.jpg",
+        "accuracy": 1.3173317547909846e-08
+    },
+    {
+        "image_name": "img311.jpg",
+        "accuracy": 7.172752134465554e-07
+    },
+    {
+        "image_name": "img312.jpg",
+        "accuracy": 0.0009901317534968257
+    },
+    {
+        "image_name": "img313.jpg",
+        "accuracy": 1.700227159062706e-07
+    },
+    {
+        "image_name": "img314.jpg",
+        "accuracy": 6.873171059851302e-06
+    },
+    {
+        "image_name": "img315.jpg",
+        "accuracy": 1.7674448571369794e-09
+    },
+    {
+        "image_name": "img316.jpg",
+        "accuracy": 7.873503022892692e-07
+    },
+    {
+        "image_name": "img317.jpg",
+        "accuracy": 2.7314055841998197e-05
+    },
+    {
+        "image_name": "img318.jpg",
+        "accuracy": 1.9551684715679585e-08
+    },
+    {
+        "image_name": "img319.jpg",
+        "accuracy": 1.442233976689522e-08
+    },
+    {
+        "image_name": "img320.jpg",
+        "accuracy": 1.6582137618570414e-07
+    },
+    {
+        "image_name": "img321.jpg",
+        "accuracy": 2.097928518196568e-05
+    },
+    {
+        "image_name": "img322.jpg",
+        "accuracy": 1.1096801699750358e-07
+    },
+    {
+        "image_name": "img323.jpg",
+        "accuracy": 2.96259783198749e-12
+    },
+    {
+        "image_name": "img324.jpg",
+        "accuracy": 9.646828402765095e-07
+    },
+    {
+        "image_name": "img325.jpg",
+        "accuracy": 1.273271550417121e-07
+    },
+    {
+        "image_name": "img326.jpg",
+        "accuracy": 3.420586480729071e-08
+    },
+    {
+        "image_name": "img327.jpg",
+        "accuracy": 4.502101816350468e-12
     }
 ]

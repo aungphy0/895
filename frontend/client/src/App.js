@@ -24,7 +24,7 @@ function App() {
          const response = await axios.get(`http://127.0.0.1:5000/${selectedRunModel}`, {
               params: {
                  data: './dataset1',
-                 truth: './truth.json',
+                 truth: './truth1.json',
               },
          });
          console.log("Running!");
@@ -252,6 +252,8 @@ function App() {
                 height={150}
                 FROM_VARIABLES={0}
                 TO_VARIABLES={1000}
+                START={value1}
+                END={value2}
               />
             }
           />

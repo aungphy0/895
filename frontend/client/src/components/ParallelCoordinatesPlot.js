@@ -1,5 +1,6 @@
 import * as d3 from 'd3';
 import AxisVertical from './AxisVertical';
+import { useState } from 'react';
 
 const MARGIN = { top: 60, right: 40, bottom: 30, left: 250 };
 
@@ -26,6 +27,9 @@ const ParallelCoordinatePlot = ({data, width, height, FROM_VARIABLES, TO_VARIABL
       .domain([0, 1]);
   });
 
+
+  const [imgUrl, setImgUrl] = useState();
+
   // Compute lines
   const lineGenerator = d3.line();
 
@@ -44,9 +48,9 @@ const ParallelCoordinatePlot = ({data, width, height, FROM_VARIABLES, TO_VARIABL
       return <></>;
     }
     
-    
-    return <path key={i} d={d} stroke="skyblue" fill="none" onClick={(d) => {console.log("clicked", 
-                                                              data[d['target']['__reactFiber$v51kg04fwtf']['alternate']['index']])}}
+                                                                    //(d) => {console.log("clicked",
+    return <path key={i} d={d} stroke="skyblue" fill="none" onClick={(d) => {console.log("clicked", d)}}
+                                                                    //  data[d['target']['__reactFiber$apr8x9io4sm']['alternate']['index']]['name']}
     />;
   });
 
@@ -71,6 +75,7 @@ const ParallelCoordinatePlot = ({data, width, height, FROM_VARIABLES, TO_VARIABL
         {allAxes}
       </g>
     </svg>
+    
   );
 }
 
