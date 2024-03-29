@@ -15,9 +15,6 @@ from skimage import io, transform
 from torchvision import transforms
 
 app = Flask(__name__)
-
-
-
 CORS(app)
 
 
@@ -1109,6 +1106,16 @@ def fetch_mnasnet0_5():
         return jsonify(data)
     except FileNotFoundError:
         return jsonify({"error": "File not found"}), 404
+    
+@app.route('/api/classes')
+def get_classes():
+    try:
+        with open('classes.json', 'r') as f:
+            class_data = json.load(f)
+        return jsonify(class_data)
+    except FileNotFoundError:
+        return jsonify({"error": "Class data not found"}), 404
+
 
 if __name__ == '__main__':
     app.run(debug=True)

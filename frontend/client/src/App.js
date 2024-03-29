@@ -240,7 +240,7 @@ function App() {
         </Routes>
       </BrowserRouter>
 
-
+      <h1>{`${selectedModel.slice(5)}Net`}</h1>
       <BrowserRouter>
         <Routes>
           <Route
