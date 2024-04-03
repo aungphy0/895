@@ -1,3 +1,4 @@
+import {useRef, useEffect, useState} from 'react';
 import * as d3 from 'd3';
 import AxisVerticalWide from './AxisVerticalWide';
 
@@ -57,8 +58,42 @@ const ParallelCoordinateWide = ({data, width, height, FROM_VARIABLES, TO_VARIABL
     );
   });
 
+  const svgRef = useRef(null);
+  const [rectX, setRectX] = useState(MARGIN.left + START);
+
+  useEffect( () => {
+    
+    
+    const svg = d3.select(svgRef.current);
+
+    const rectWidth = 31;
+    const rectHeight = 80;
+    // const rectX = 250 + START;
+    const rectY = 50;
+
+    svg.selectAll('#myRect').remove();
+
+    svg.append('rect')
+       .attr('id', 'myRect')
+       .attr('y', rectY)
+       .attr('width', rectWidth)
+       .attr('height', rectHeight)
+       .attr('fill', 'grey')
+       .attr('opacity', 0.5)
+       .attr('x', rectX);
+    // svg.select('#myRect')
+    //    .attr('x', rectX)
+
+  }, [rectX]);
+
+  const handleRangeChange = () => {
+    setRectX(MARGIN.left + (START * 1.51));
+    console.log(START);
+  };
+
+  
   return (
-    <svg width={width} height={height}>
+    <svg ref={svgRef} onClick={handleRangeChange} width={width} height={height}>
       <g
         width={boundsWidth}
         height={boundsHeight}

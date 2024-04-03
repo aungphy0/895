@@ -240,7 +240,8 @@ function App() {
         </Routes>
       </BrowserRouter>
 
-      <h1>{`${selectedModel.slice(5)}Net`}</h1>
+      <h1> {`${selectedModel.slice(5)}`.concat(`${selectedModel ? "Net" : ""}`)} </h1>
+
       <BrowserRouter>
         <Routes>
           <Route
