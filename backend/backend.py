@@ -1106,7 +1106,7 @@ def fetch_mnasnet0_5():
         return jsonify(data)
     except FileNotFoundError:
         return jsonify({"error": "File not found"}), 404
-    
+
 @app.route('/api/classes')
 def get_classes():
     try:
