@@ -46,6 +46,7 @@ def generate_alex_net(data, truth):
         data.append(f1)
     conv_image=[]
 
+
     transform = transforms.Compose([
         transforms.Resize(256),
         transforms.CenterCrop(224),
@@ -135,10 +136,10 @@ def generate_alex_net(data, truth):
 
             totPercent.append(per[l])
 
-    json_data = json.dumps(values)
-
-    with open('alexnet.json', 'w') as f:
-        f.write(json_data)
+    # json_data = json.dumps(values)
+    #
+    # with open('alexnet.json', 'w') as f:
+    #     f.write(json_data)
 
     ans = 0
     for i in range(len(predictions)):
@@ -182,7 +183,7 @@ def generate_alex_net(data, truth):
     x=0
 
     # output_json_file = "Alex_Net_values.json"
-    output_json_file = "Alexnet_values_one.json"
+    output_json_file = "Alexnet.json"
 
     with open(output_json_file, "w") as json_file:
         json.dump(modified_data, json_file, indent=4)
@@ -328,10 +329,10 @@ def generate_mobile_net(data, truth):
 
             totPercent.append(per[l])
 
-    json_data = json.dumps(values)
-
-    with open('mobilenet.json', 'w') as f:
-        f.write(json_data)
+    # json_data = json.dumps(values)
+    #
+    # with open('mobilenet.json', 'w') as f:
+    #     f.write(json_data)
 
     ans = 0
     for i in range(len(predictions)):
@@ -374,7 +375,7 @@ def generate_mobile_net(data, truth):
 
     x=0
 
-    output_json_file = "Mobilenet_values_one.json"
+    output_json_file = "Mobilenet.json"
 
     with open(output_json_file, "w") as json_file:
         json.dump(modified_data, json_file, indent=4)
@@ -518,10 +519,10 @@ def generate_shuffle_net(data, truth):
             totPercent.append(per[l])
         values.append(totPercent)
 
-    json_data = json.dumps(values)
-
-    with open('shufflenet.json', 'w') as f:
-        f.write(json_data)
+    # json_data = json.dumps(values)
+    #
+    # with open('shufflenet.json', 'w') as f:
+    #     f.write(json_data)
 
     ans = 0
     for i in range(len(predictions)):
@@ -531,7 +532,7 @@ def generate_shuffle_net(data, truth):
     print(ans)
     print(len(predictions))
 
-    output_json_file = "Shufflenet_values_one.json"
+    output_json_file = "Shufflenet.json"
 
     with open(output_json_file, "w") as json_file:
         json.dump(modified_data, json_file, indent=4)
@@ -673,10 +674,10 @@ def generate_squeeze1_0_net(data, truth):
             totPercent.append(per[l])
         values.append(totPercent)
 
-    json_data = json.dumps(values)
-
-    with open('squeezenet1_0.json', 'w') as f:
-        f.write(json_data)
+    # json_data = json.dumps(values)
+    #
+    # with open('squeezenet1_0.json', 'w') as f:
+    #     f.write(json_data)
 
     ans = 0
     for i in range(len(predictions)):
@@ -686,7 +687,7 @@ def generate_squeeze1_0_net(data, truth):
     print(ans)
     print(len(predictions))
 
-    output_json_file = "Squeezenet1_0_values_one.json"
+    output_json_file = "Squeezenet1_0.json"
 
     with open(output_json_file, "w") as json_file:
         json.dump(modified_data, json_file, indent=4)
@@ -799,10 +800,10 @@ def generate_squeeze1_1_net(data, truth):
             totPercent.append(per[l])
         values.append(totPercent)
 
-    json_data = json.dumps(values)
-
-    with open('squeezenet1_1.json', 'w') as f:
-        f.write(json_data)
+    # json_data = json.dumps(values)
+    #
+    # with open('squeezenet1_1.json', 'w') as f:
+    #     f.write(json_data)
 
     ans = 0
     for i in range(len(predictions)):
@@ -812,7 +813,7 @@ def generate_squeeze1_1_net(data, truth):
     print(ans)
     print(len(predictions))
 
-    output_json_file = "Squeezenet1_1_values_one.json"
+    output_json_file = "Squeezenet1_1.json"
 
     with open(output_json_file, "w") as json_file:
         json.dump(modified_data, json_file, indent=4)
@@ -924,10 +925,10 @@ def generate_mnasnet0_5_net(data, truth):
             totPercent.append(per[l])
         values.append(totPercent)
 
-    json_data = json.dumps(values)
-
-    with open('mnasnet.json', 'w') as f:
-        f.write(json_data)
+    # json_data = json.dumps(values)
+    #
+    # with open('mnasnet.json', 'w') as f:
+    #     f.write(json_data)
 
     ans = 0
     for i in range(len(predictions)):
@@ -937,7 +938,7 @@ def generate_mnasnet0_5_net(data, truth):
     print(ans)
     print(len(predictions))
 
-    output_json_file = "Mnasnet0_5_values_one.json"
+    output_json_file = "Mnasnet0_5.json"
 
     with open(output_json_file, "w") as json_file:
         json.dump(modified_data, json_file, indent=4)
@@ -1024,7 +1025,7 @@ def fetch_alex():
     model = request.args.get('model', default='alexnet', type=str)
     # filename = "Alex_Net_values.json"
     # filename = './image_json_files_alex/img7.json'
-    filename = "Alexnet_values_one.json"
+    filename = "Alexnet.json"
     # filename = "truth.json"
 
     try:
@@ -1040,7 +1041,7 @@ def fetch_mobile():
     model = request.args.get('model', default='mobilenet', type=str)
     # filename = "Mobile_Net_values.json"
     #filename = './image_json_files_mobile/img7.json'
-    filename = "Mobilenet_values_one.json"
+    filename = "Mobilenet.json"
 
     try:
         with open(filename, 'r') as json_file:
@@ -1054,7 +1055,7 @@ def fetch_shuffle():
     model = request.args.get('model', default='shufflenet', type=str)
     # filename = "Mobile_Net_values.json"
     #filename = './image_json_files_mobile/img7.json'
-    filename = "Shufflenet_values_one.json"
+    filename = "Shufflenet.json"
 
     try:
         with open(filename, 'r') as json_file:
@@ -1068,7 +1069,7 @@ def fetch_squeezenet1_0():
     model = request.args.get('model', default='squeezenet1_0', type=str)
     # filename = "Mobile_Net_values.json"
     #filename = './image_json_files_mobile/img7.json'
-    filename = "Squeezenet1_0_values_one.json"
+    filename = "Squeezenet1_0.json"
 
     try:
         with open(filename, 'r') as json_file:
@@ -1083,7 +1084,7 @@ def fetch_squeezenet1_1():
     model = request.args.get('model', default='squeezenet1_1', type=str)
     # filename = "Mobile_Net_values.json"
     #filename = './image_json_files_mobile/img7.json'
-    filename = "Squeezenet1_1_values_one.json"
+    filename = "Squeezenet1_1.json"
 
     try:
         with open(filename, 'r') as json_file:
@@ -1098,7 +1099,7 @@ def fetch_mnasnet0_5():
     model = request.args.get('model', default='mnasnet0_5', type=str)
     # filename = "Mobile_Net_values.json"
     #filename = './image_json_files_mobile/img7.json'
-    filename = "Mnasnet0_5_values_one.json"
+    filename = "Mnasnet0_5.json"
 
     try:
         with open(filename, 'r') as json_file:
