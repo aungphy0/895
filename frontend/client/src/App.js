@@ -23,8 +23,8 @@ function App() {
        try {
          const response = await axios.get(`http://127.0.0.1:5000/${selectedRunModel}`, {
               params: {
-                 data: './dataset1',
-                 truth: './truth1.json',
+                 data: './dataset',
+                 truth: './truth.json',
               },
          });
          console.log("Running!");
@@ -77,11 +77,7 @@ function App() {
       const value = parseInt(event.target.value);
       setValue1(value);
       setValue2(value+20);
-      // if (slider === 1) {
-      //   setValue1(value);
-      // } else if (slider === 2) {
-      //   setValue2(value);
-      // }
+      
   };
 
   // ################  data folder input  ############### 

@@ -1,0 +1,33 @@
+
+Dataset
+
+* pick 100 images put in dataset folder (KMK)
+* truth label for the images (KMK)
+* after the images dataset create model files (AP)
+
+
+Frontend 
+
+* 3 inputs on panel and with button to generate (AP)
+
+Day 2
+
+- improve panel 
+- improve tooltips
+- wideview scrolling 
+- chord chart 
+- click on line and show image in small panel
+- heat map to show the truth value
+ 
+
+
+
+Backend 
+
+Day 2
+
+- img0, img1 -> image file name 
+- mapping [img name, label] -> send as .json 
+
+
+

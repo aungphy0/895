@@ -92,8 +92,8 @@ const ParallelCoordinateWide = ({data, width, height, FROM_VARIABLES, TO_VARIABL
   };
 
   
-  return (
-    <svg ref={svgRef} onClick={handleRangeChange} width={width} height={height}>
+  return (             
+    <svg ref={svgRef}  onClick={handleRangeChange} width={width} height={height}>
       <g
         width={boundsWidth}
         height={boundsHeight}
@@ -107,5 +107,6 @@ const ParallelCoordinateWide = ({data, width, height, FROM_VARIABLES, TO_VARIABL
 }
 
 export default ParallelCoordinateWide;
+
 
 
