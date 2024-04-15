@@ -32,6 +32,7 @@ const SankeyDiagram = ({ images, classMap, modelData }) => {
             links: links.map(d => ({ ...d }))
         });
 
+        // Draw links
         svg.append("g")
             .selectAll("path")
             .data(graph.links)
@@ -40,8 +41,10 @@ const SankeyDiagram = ({ images, classMap, modelData }) => {
             .attr("stroke-width", d => Math.max(1, d.width))
             .attr("fill", "none")
             .attr("stroke", "grey")
-            .attr("stroke-opacity", 0.5);
+            .attr("stroke-opacity", 0.5)
+            .classed("link", true);
 
+        // Draw nodes and setup click event handler
         svg.append("g")
             .selectAll("rect")
             .data(graph.nodes)
@@ -50,8 +53,13 @@ const SankeyDiagram = ({ images, classMap, modelData }) => {
             .attr("y", d => d.y0)
             .attr("height", d => d.y1 - d.y0)
             .attr("width", sankeyGenerator.nodeWidth())
-            .attr("fill", "navy");
+            .attr("fill", "navy")
+            .on("click", (event, clickedNode) => {
+                svg.selectAll("path.link")
+                    .attr("stroke", link => link.source.index === clickedNode.index || link.target.index === clickedNode.index ? "red" : "grey");
+            });
 
+        // Add node titles
         svg.append("g")
             .selectAll("text")
             .data(graph.nodes)
@@ -62,7 +70,7 @@ const SankeyDiagram = ({ images, classMap, modelData }) => {
             .attr("text-anchor", "middle")
             .text(d => d.name);
 
-    }, [modelData, images, classMap]); // Ensure these dependencies are correct
+    }, [modelData, images, classMap]);
 
     return <svg ref={svgRef}></svg>;
 };
@@ -74,16 +82,13 @@ function createSankeyData(modelData, images, classMap) {
     modelData.forEach(data => {
         const imageName = data.name;
         const imageClass = images[imageName];
-        // Construct the image node name, including its mapped class for clarity
         const imageNode = findOrCreateNode(nodes, imageName + " (" + (classMap[imageClass]?.name || "Unknown") + ")");
 
         data.probabilities.forEach((prob, index) => {
-            // Filter out very small probabilities; adjust this threshold as needed
             if (prob <= 1e-2) return;
 
-            // Ensure class data exists for the given index (1-based index adjustment)
             const classInfo = classMap[index + 1];
-            if (!classInfo) return;  // Skip if no class data available
+            if (!classInfo) return;
 
             const classNode = findOrCreateNode(nodes, classInfo.name + " (Class " + (index + 1) + ")");
             links.push({
@@ -105,8 +110,5 @@ function findOrCreateNode(nodes, name) {
     }
     return node;
 }
-
-
-
 
 export default SankeyDiagram;
