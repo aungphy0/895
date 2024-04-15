@@ -3,4 +3,40 @@ svg {
 }
 
 
+#chartContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
 
+
+
+}
+.sankey-diagram {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+    
+    
+}
+
+.node {
+    stroke: #fff;
+    stroke-width: 10px;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.node-title {
+    fill: #000;
+    font-size: 12px;
+    pointer-events: pointer;
+}
+
+.link {
+    stroke-opacity: 0.5;
+    transition: stroke-opacity 0.3s, stroke 0.3s;
+}
+
+.link:hover {
+    stroke-opacity: 0.7;
+}

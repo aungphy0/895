@@ -7,25 +7,20 @@ const SankeyDiagram = ({ images, classMap, modelData }) => {
     const svgRef = useRef(null);
 
     useEffect(() => {
-        if (!modelData || !images || !classMap) {
-            console.error("Data is missing:");
-            console.log({modelData, images, classMap});
-            return;
-        }
-
         const width = 1200;
-        const height = 800;
+        const height = 800; // Adjusted height to a more standard value
         const svg = d3.select(svgRef.current)
+            .attr('class', 'sankey-diagram')
             .attr('width', width)
             .attr('height', height)
-            .html(''); // Clear the SVG to prevent duplication
+            .html('');
 
         const { nodes, links } = createSankeyData(modelData, images, classMap);
 
         const sankeyGenerator = sankey()
             .nodeWidth(36)
-            .nodePadding(40)
-            .extent([[1, 1], [width - 1, height - 5]]);
+            .nodePadding(20) // Adjusted node padding for better spacing
+            .extent([[1, 1], [width - 1, height - 1]]); // Adjusted extent to fit within SVG
 
         const graph = sankeyGenerator({
             nodes: nodes.map(d => ({ ...d })),
@@ -34,6 +29,7 @@ const SankeyDiagram = ({ images, classMap, modelData }) => {
 
         // Draw links
         svg.append("g")
+            .attr("class", "links")
             .selectAll("path")
             .data(graph.links)
             .enter().append("path")
@@ -42,25 +38,29 @@ const SankeyDiagram = ({ images, classMap, modelData }) => {
             .attr("fill", "none")
             .attr("stroke", "grey")
             .attr("stroke-opacity", 0.5)
+            .on("click", (event, clickedLink) => {
+                console.log("Clicked link:", clickedLink);
+            })
             .classed("link", true);
 
-        // Draw nodes and setup click event handler
-        svg.append("g")
+        // Draw nodes
+        const node = svg.append("g")
             .selectAll("rect")
             .data(graph.nodes)
             .enter().append("rect")
+            .attr("class", "node")
             .attr("x", d => d.x0)
             .attr("y", d => d.y0)
             .attr("height", d => d.y1 - d.y0)
             .attr("width", sankeyGenerator.nodeWidth())
             .attr("fill", "navy")
             .on("click", (event, clickedNode) => {
-                svg.selectAll("path.link")
-                    .attr("stroke", link => link.source.index === clickedNode.index || link.target.index === clickedNode.index ? "red" : "grey");
+                console.log("Clicked node:", clickedNode.name);
             });
 
         // Add node titles
         svg.append("g")
+            .attr("class", "node-titles")
             .selectAll("text")
             .data(graph.nodes)
             .enter().append("text")
@@ -68,7 +68,9 @@ const SankeyDiagram = ({ images, classMap, modelData }) => {
             .attr("y", d => (d.y0 + d.y1) / 2)
             .attr("dy", "0.35em")
             .attr("text-anchor", "middle")
-            .text(d => d.name);
+            .text(d => d.name)
+            .attr("class", "node-title")
+            .style("pointer-events", "none"); // Prevent text from capturing click events
 
     }, [modelData, images, classMap]);
 
@@ -82,7 +84,7 @@ function createSankeyData(modelData, images, classMap) {
     modelData.forEach(data => {
         const imageName = data.name;
         const imageClass = images[imageName];
-        const imageNode = findOrCreateNode(nodes, imageName + " (" + (classMap[imageClass]?.name || "Unknown") + ")");
+        const imageNode = findOrCreateNode(nodes, imageName);
 
         data.probabilities.forEach((prob, index) => {
             if (prob <= 1e-2) return;

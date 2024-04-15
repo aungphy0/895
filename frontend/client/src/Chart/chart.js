@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SankeyDiagram from './SankeyDiagram'; 
+import CircleSankey from './CircleSankey';
 
 const Chart = () => {
     const [data, setData] = useState(null);
@@ -28,9 +29,9 @@ const Chart = () => {
     }, []);
 
     return (
-        <div>
+        <div id='chartContainer'>
             {data ? (
-                <SankeyDiagram
+                <CircleSankey
                     images={data.imageClassMapping}
                     classMap={data.classData}
                     modelData={data.modelData}
