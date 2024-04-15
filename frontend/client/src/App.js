@@ -8,37 +8,38 @@ import axios from 'axios';
 // import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
 // import FileInput from 'react-file-reader-input';
-
+// import theimg from 'https://github.com/aungphy0/895/blob/main/backend/dataset/n01496331_21079.jpeg';
 
 function App() {
 
   const [ selectedModel, setSelectedModel ] = useState("");
   const [ pdata, setPData ] = useState([]);
+  
+  const [ img, setImg ] = useState('./default-placeholder.png');
 
+  // const [ selectedRunModel, setSelectedRunModel ] = useState("");
 
-  const [ selectedRunModel, setSelectedRunModel ] = useState("");
+  // useEffect(() => {
+  //   const runData = async () => {
+  //      try {
+  //        const response = await axios.get(`http://127.0.0.1:5000/${selectedRunModel}`, {
+  //             params: {
+  //                data: './dataset',
+  //                truth: './truth.json',
+  //             },
+  //        });
+  //        console.log("Running!");
+  //       //  setPData(response.data || []);
+  //       if(response){
+  //         console.log("Done!");
+  //       }
+  //      } catch (error) {
+  //        console.error('Error fetching data:', error);
+  //      }
+  //   };
 
-  useEffect(() => {
-    const runData = async () => {
-       try {
-         const response = await axios.get(`http://127.0.0.1:5000/${selectedRunModel}`, {
-              params: {
-                 data: './dataset',
-                 truth: './truth.json',
-              },
-         });
-         console.log("Running!");
-        //  setPData(response.data || []);
-        if(response){
-          console.log("Done!");
-        }
-       } catch (error) {
-         console.error('Error fetching data:', error);
-       }
-    };
-
-    runData();
-  }, [selectedRunModel]);
+  //   runData();
+  // }, [selectedRunModel]);
 
 
 
@@ -56,16 +57,17 @@ function App() {
   }, [selectedModel]);
 
 
-  const handleRunModelChange = (event) => {
-    setSelectedRunModel(event.target.value);
-    handleFolderSubmit();
-    handleFileSubmit();
-  };
+  // const handleRunModelChange = (event) => {
+  //   setSelectedRunModel(event.target.value);
+  //   // handleFolderSubmit();
+  //   // handleFileSubmit();
+  // };
 
   const handleModelChange = (event) => {
     setSelectedModel(event.target.value);
   };
 
+ 
 
   // const data = [{"name": "image_name", "probabilities": pdata}];
   const data = pdata
@@ -82,6 +84,7 @@ function App() {
 
   // ################  data folder input  ############### 
   const [selectedFiles, setselectedFiles] = useState([]);
+  const [file, setFile] = useState(null);
 
   const handleFolderChange = (event) => {
     const fileList = event.target.files;
@@ -91,20 +94,25 @@ function App() {
 
   const handleFolderSubmit = (event) => {
     // event.preventDefault();
-    if (selectedFiles) {
+    if (selectedFiles && file) {
       // Here you can perform actions like submitting the file
       // to a server or handling it within your React application.
       console.log('Selected Folder:', selectedFiles);
+      console.log('Selected File:', file);
       // Reset the file state after submission if needed
       setselectedFiles(null);
+      setFile(null);
     } else {
-      alert('Please select a data folder.');
+      if(!selectedFiles)
+        alert('Please select a data folder.');
+      if(!file)
+        alert('Please select a file.');
     }
   };
   // ################  data folder input  ############### 
 
   // ################  truth.json file input  ############### 
-  const [file, setFile] = useState(null);
+  // const [file, setFile] = useState(null);
 
   const handleFileChange = (event) => {
     const selectedFile = event.target.files[0];
@@ -124,14 +132,14 @@ function App() {
     }
   }
   // ################  truth.json file input  ############### 
-
+  
   return (
     <div className="App">
    
-      <div className="LeftPanel">
+      <form className="LeftPanel" onSubmit={handleFolderSubmit}>
 
         {/* ################  data folder input  ############### */}
-        <div>
+        <div className="datafolder">
           <form onSubmit={handleFolderSubmit}>
             <label htmlFor="folderInput">Select a folder:</label>
             <input
@@ -149,7 +157,7 @@ function App() {
 
 
         {/* ################  truth.json file input  ############### */}
-        <div>
+        <div className="truth">
           <form onSubmit={handleFileSubmit}>
             <br/>
             <label>Select truth.json file</label>
@@ -159,9 +167,11 @@ function App() {
         </div>
         {/* ################  truth.json file input  ############### */}
 
+        <br></br>
+        <button type="submit">Upload</button>
 
         {/* for models selction to run model */}
-        <div className="ModelSelect">
+        {/* <div className="ModelSelect">
           <label> Run Models </label> <br/><br/>
           <select onChange={handleRunModelChange} value={selectedRunModel}>
               <option value="">Select Model</option>
@@ -172,9 +182,9 @@ function App() {
               <option value="runSqueezenet1_1">SqueezeNet1_1</option>
               <option value="runMnasnet0_5">Mnasnet0_5</option>
           </select>
-        </div>
+        </div> */}
         {/* for models selction to run model */}
-
+        
 
         {/* for models selction to show data */}
         <div className="ModelSelect">
@@ -203,7 +213,7 @@ function App() {
             />
             <span>{value1}</span>
         </div>
-
+        
         {/* <div className="ToRange">
             <label>To:</label>
             <input
@@ -215,10 +225,15 @@ function App() {
             />
             <span>{value2}</span>
         </div> */}
-        
-      </div>
-
-
+        <div>
+          <img src={ img === "./default-placeholder.png" ? './default-placeholder.png' : `./dataset/${img}`}
+               alt={"pic"}
+               style={{ width: '150px', height: 'auto' }}
+          />
+        </div>
+      </form>
+      
+      
       <BrowserRouter>
         <Routes>
           <Route
@@ -230,6 +245,8 @@ function App() {
                 height={400}
                 FROM_VARIABLES={value1}
                 TO_VARIABLES={value2}
+                img = {img}
+                setImg = {setImg}
               />
             }
           />
@@ -256,6 +273,7 @@ function App() {
           />
         </Routes>
       </BrowserRouter>
+
     </div>
   );
 }

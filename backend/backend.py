@@ -44,6 +44,7 @@ def generate_alex_net(data, truth):
 
     for f1 in files:
         data.append(f1)
+
     conv_image=[]
 
 
@@ -102,9 +103,10 @@ def generate_alex_net(data, truth):
         else:
             predictions.append(0)
 
-        strin="img"
-        strin+=""+str(i)+""
-        strin+=".jpg"
+        # strin="img"
+        # strin+=""+str(i)+""
+        # strin+=".jpg"
+        strin = str(files[i]).split('/')[2]
 
         print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
         print(strin)
@@ -300,10 +302,10 @@ def generate_mobile_net(data, truth):
         else:
             predictions.append(0)
 
-        strin="img"
-        strin+=""+str(i)+""
-        strin+=".jpg"
-
+        # strin="img"
+        # strin+=""+str(i)+""
+        # strin+=".jpg"
+        strin = str(files[i]).split('/')[2]
         # for idx in indices[0]:
         #     per.append(percentage[idx].item())
         # totPercent=[]
@@ -489,9 +491,10 @@ def generate_shuffle_net(data, truth):
         else:
             predictions.append(0)
 
-        strin="img"
-        strin+=""+str(i)+""
-        strin+=".jpg"
+        # strin="img"
+        # strin+=""+str(i)+""
+        # strin+=".jpg"
+        strin = str(files[i]).split('/')[2]
 
         print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
         print(strin)
@@ -646,9 +649,10 @@ def generate_squeeze1_0_net(data, truth):
             predictions.append(0)
 
 
-        strin="img"
-        strin+=""+str(i)+""
-        strin+=".jpg"
+        # strin="img"
+        # strin+=""+str(i)+""
+        # strin+=".jpg"
+        strin = str(files[i]).split('/')[2]
 
         print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
         print(strin)
@@ -771,9 +775,10 @@ def generate_squeeze1_1_net(data, truth):
         else:
             predictions.append(0)
 
-        strin="img"
-        strin+=""+str(i)+""
-        strin+=".jpg"
+        # strin="img"
+        # strin+=""+str(i)+""
+        # strin+=".jpg"
+        strin = str(files[i]).split('/')[2]
 
         print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
         print(strin)
@@ -897,10 +902,11 @@ def generate_mnasnet0_5_net(data, truth):
         else:
             predictions.append(0)
 
-        strin="img"
-        strin+=""+str(i)+""
-        strin+=".jpg"
-
+        # strin="img"
+        # strin+=""+str(i)+""
+        # strin+=".jpg"
+        strin = str(files[i]).split('/')[2]
+        
         print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
         print(strin)
 
