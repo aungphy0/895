@@ -232,48 +232,48 @@ function App() {
           />
         </div>
       </form>
+
       
+          <BrowserRouter>
+            <Routes>
+              <Route
+                path='/'
+                element={
+                  <ParallelCoordinatesPlot
+                    data={data}
+                    width={1800}
+                    height={400}
+                    FROM_VARIABLES={value1}
+                    TO_VARIABLES={value2}
+                    img = {img}
+                    setImg = {setImg}
+                  />
+                }
+              />
+            </Routes>
+          </BrowserRouter>
+
+          <h1> {`${selectedModel.slice(5)}`.concat(`${selectedModel ? "Net" : ""}`)} </h1>
+
+          <BrowserRouter>
+            <Routes>
+              <Route
+                path='/'
+                element={
+                  <ParallelCoordinatesWide
+                    data={data}
+                    width={1800}
+                    height={150}
+                    FROM_VARIABLES={0}
+                    TO_VARIABLES={1000}
+                    START={value1}
+                    END={value2}
+                  />
+                }
+              />
+            </Routes>
+          </BrowserRouter>
       
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path='/'
-            element={
-              <ParallelCoordinatesPlot
-                data={data}
-                width={1800}
-                height={400}
-                FROM_VARIABLES={value1}
-                TO_VARIABLES={value2}
-                img = {img}
-                setImg = {setImg}
-              />
-            }
-          />
-        </Routes>
-      </BrowserRouter>
-
-      <h1> {`${selectedModel.slice(5)}`.concat(`${selectedModel ? "Net" : ""}`)} </h1>
-
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path='/'
-            element={
-              <ParallelCoordinatesWide
-                data={data}
-                width={1800}
-                height={150}
-                FROM_VARIABLES={0}
-                TO_VARIABLES={1000}
-                START={value1}
-                END={value2}
-              />
-            }
-          />
-        </Routes>
-      </BrowserRouter>
-
     </div>
   );
 }

@@ -61,11 +61,13 @@ const ParallelCoordinateWide = ({data, width, height, FROM_VARIABLES, TO_VARIABL
   const svgRef = useRef(null);
   const [rectX, setRectX] = useState(MARGIN.left + START);
 
+  
   useEffect( () => {
     
     
     const svg = d3.select(svgRef.current);
 
+    
     const rectWidth = 31;
     const rectHeight = 80;
     // const rectX = 250 + START;
@@ -81,6 +83,7 @@ const ParallelCoordinateWide = ({data, width, height, FROM_VARIABLES, TO_VARIABL
        .attr('fill', 'grey')
        .attr('opacity', 0.5)
        .attr('x', rectX);
+    
     // svg.select('#myRect')
     //    .attr('x', rectX)
 
@@ -92,8 +95,8 @@ const ParallelCoordinateWide = ({data, width, height, FROM_VARIABLES, TO_VARIABL
   };
 
   
-  return (             
-    <svg ref={svgRef}  onClick={handleRangeChange} width={width} height={height}>
+  return (
+    <svg ref={svgRef} onClick={handleRangeChange} width={width} height={height}>
       <g
         width={boundsWidth}
         height={boundsHeight}
