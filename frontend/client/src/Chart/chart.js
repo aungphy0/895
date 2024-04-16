@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SankeyDiagram from './SankeyDiagram'; 
 import CircleSankey from './CircleSankey';
+import ChordChart from './ChordChart';
 
 const Chart = () => {
     const [data, setData] = useState(null);

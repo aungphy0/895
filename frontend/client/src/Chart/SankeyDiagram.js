@@ -8,7 +8,7 @@ const SankeyDiagram = ({ images, classMap, modelData }) => {
 
     useEffect(() => {
         const width = 1200;
-        const height = 800; // Adjusted height to a more standard value
+        const height = 4800; // Adjusted height to a more standard value
         const svg = d3.select(svgRef.current)
             .attr('class', 'sankey-diagram')
             .attr('width', width)
