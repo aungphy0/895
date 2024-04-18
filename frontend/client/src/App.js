@@ -228,12 +228,12 @@ function App() {
         <div>
           <img src={ img === "./default-placeholder.png" ? './default-placeholder.png' : `./dataset/${img}`}
                alt={"pic"}
-               style={{ width: '150px', height: 'auto' }}
+               style={{ width: '200px', height: 'auto' }}
           />
         </div>
       </form>
 
-      
+        <div className='detailview'>
           <BrowserRouter>
             <Routes>
               <Route
@@ -254,7 +254,10 @@ function App() {
           </BrowserRouter>
 
           <h1> {`${selectedModel.slice(5)}`.concat(`${selectedModel ? "Net" : ""}`)} </h1>
+        </div>
 
+        
+        <div className='wideview'>
           <BrowserRouter>
             <Routes>
               <Route
@@ -273,7 +276,7 @@ function App() {
               />
             </Routes>
           </BrowserRouter>
-      
+        </div>
     </div>
   );
 }
