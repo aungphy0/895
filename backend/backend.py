@@ -906,7 +906,6 @@ def generate_mnasnet0_5_net(data, truth):
         # strin+=""+str(i)+""
         # strin+=".jpg"
         strin = str(files[i]).split('/')[2]
-        
         print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
         print(strin)
 
