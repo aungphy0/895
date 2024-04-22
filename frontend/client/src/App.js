@@ -7,7 +7,9 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 // import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
-// import FileInput from 'react-file-reader-input';
+import ImageUpload from './components/ImageUpload';
+import TruthUpload from './components/TruthUpload';
+import ModelUpload from './components/ModelUpload';
 // import theimg from 'https://github.com/aungphy0/895/blob/main/backend/dataset/n01496331_21079.jpeg';
 
 function App() {
@@ -83,93 +85,99 @@ function App() {
   };
 
   // ################  data folder input  ############### 
-  const [selectedFiles, setselectedFiles] = useState([]);
-  const [file, setFile] = useState(null);
+  // const [selectedFiles, setselectedFiles] = useState([]);
+  // const [file, setFile] = useState(null);
 
-  const handleFolderChange = (event) => {
-    const fileList = event.target.files;
-    const filesArray = Array.from(fileList);
-    setselectedFiles(filesArray);
-  }
+  // const handleFolderChange = (event) => {
+  //   const fileList = event.target.files;
+  //   const filesArray = Array.from(fileList);
+  //   setselectedFiles(filesArray);
+  // }
 
-  const handleFolderSubmit = (event) => {
-    // event.preventDefault();
-    if (selectedFiles && file) {
-      // Here you can perform actions like submitting the file
-      // to a server or handling it within your React application.
-      console.log('Selected Folder:', selectedFiles);
-      console.log('Selected File:', file);
-      // Reset the file state after submission if needed
-      setselectedFiles(null);
-      setFile(null);
-    } else {
-      if(!selectedFiles)
-        alert('Please select a data folder.');
-      if(!file)
-        alert('Please select a file.');
-    }
-  };
+  // const handleFolderSubmit = (event) => {
+  //   // event.preventDefault();
+  //   if (selectedFiles && file) {
+  //     // Here you can perform actions like submitting the file
+  //     // to a server or handling it within your React application.
+  //     console.log('Selected Folder:', selectedFiles);
+  //     console.log('Selected File:', file);
+      
+  //     // Reset the file state after submission if needed
+  //     setselectedFiles(null);
+  //     setFile(null);
+  //   } else {
+  //     if(!selectedFiles)
+  //       alert('Please select a data folder.');
+  //     if(!file)
+  //       alert('Please select a file.');
+  //   }
+    
+  // };
   // ################  data folder input  ############### 
 
   // ################  truth.json file input  ############### 
   // const [file, setFile] = useState(null);
 
-  const handleFileChange = (event) => {
-    const selectedFile = event.target.files[0];
-    setFile(selectedFile);
-  }
+  // const handleFileChange = (event) => {
+  //   const selectedFile = event.target.files[0];
+  //   setFile(selectedFile);
+  // }
 
-  const handleFileSubmit = (event) => {
-    // event.preventDefault();
-    if (file) {
-      // Here you can perform actions like submitting the file
-      // to a server or handling it within your React application.
-      console.log('Selected File:', file);
-      // Reset the file state after submission if needed
-      setFile(null);
-    } else {
-      alert('Please select a file.');
-    }
-  }
+  // const handleFileSubmit = (event) => {
+  //   // event.preventDefault();
+  //   if (file) {
+  //     // Here you can perform actions like submitting the file
+  //     // to a server or handling it within your React application.
+  //     console.log('Selected File:', file);
+  //     // Reset the file state after submission if needed
+  //     setFile(null);
+  //   } else {
+  //     alert('Please select a file.');
+  //   }
+  // }
   // ################  truth.json file input  ############### 
   
   return (
     <div className="App">
    
-      <form className="LeftPanel" onSubmit={handleFolderSubmit}>
+      <div className="LeftPanel">
 
         {/* ################  data folder input  ############### */}
         <div className="datafolder">
-          <form onSubmit={handleFolderSubmit}>
-            <label htmlFor="folderInput">Select a folder:</label>
+          <ImageUpload />
+          {/* <form onSubmit={handleFolderSubmit}> */}
+          {/* <form onSubmit={handleUpload}>
+            <label htmlFor="folderInput">Select a data folder:</label>
             <input
+              className="input_data"
               type="file"
               id="folderInput"
               directory=""
               webkitdirectory=""
-              onChange={handleFolderChange}
               multiple
-            />
+              onChange={handleFolderChange}
+            /> */}
             {/* <button type="submit">Submit Folder</button> */}
-          </form>
+          {/* </form> */}
         </div>
         {/* ################  data folder input  ############### */}
 
-
+        <br></br>
         {/* ################  truth.json file input  ############### */}
         <div className="truth">
-          <form onSubmit={handleFileSubmit}>
+          <TruthUpload />
+          {/* <form onSubmit={handleFileSubmit}>
             <br/>
             <label>Select truth.json file</label>
-            <input type="file" onChange={handleFileChange} />
+            <input className="input_truth_label" type="file" onChange={handleFileChange} /> */}
             {/* <button type="submit">Submit File</button> */}
-          </form>
+          {/* </form> */}
         </div>
         {/* ################  truth.json file input  ############### */}
 
         <br></br>
-        <button type="submit">Upload</button>
-
+        {/* <button type="submit">Upload</button> */}
+        <ModelUpload />
         {/* for models selction to run model */}
         {/* <div className="ModelSelect">
           <label> Run Models </label> <br/><br/>
@@ -231,7 +239,7 @@ function App() {
                style={{ width: '200px', height: 'auto' }}
           />
         </div>
-      </form>
+      </div>
 
         <div className='detailview'>
           <BrowserRouter>

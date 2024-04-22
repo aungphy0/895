@@ -83,3 +83,12 @@
   margin-left: 50px;
 }
 
+.input_data{
+  align-items: center;
+  margin-left: 20px;
+}
+
+.input_truth_label{
+  align-items: center;
+  margin-left: 20px;
+}

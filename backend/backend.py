@@ -16,6 +16,12 @@ from torchvision import transforms
 
 app = Flask(__name__)
 CORS(app)
+#
+# UPLOAD_FOLDER = 'uploads'
+# app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+#
+# UPLOAD_TRUTH_FOLDER = 'uploads_truth'
+# app.config['UPLOAD_TRUTH_FOLDER'] = UPLOAD_TRUTH_FOLDER
 
 
 ############ AlexNet ################
@@ -1121,6 +1127,55 @@ def get_classes():
         return jsonify(class_data)
     except FileNotFoundError:
         return jsonify({"error": "Class data not found"}), 404
+
+
+@app.route('/upload_images', methods=['POST'])
+def upload_images():
+    UPLOAD_FOLDER = 'uploads'
+    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+    if 'images' not in request.files:
+        return 'No images part'
+
+    images = request.files.getlist('images')
+    for image in images:
+        image.save(os.path.join(app.config['UPLOAD_FOLDER'], image.filename))
+
+    return 'Images uploaded successfully'
+
+
+@app.route('/upload', methods=['POST'])
+def upload_file():
+    UPLOAD_TRUTH_FOLDER = 'uploads_truth'
+    app.config['UPLOAD_TRUTH_FOLDER'] = UPLOAD_TRUTH_FOLDER
+
+    if 'file' not in request.files:
+        return 'No file part'
+
+    file = request.files['file']
+    if file.filename == '':
+        return 'No selected file'
+
+    if file:
+        file.save(os.path.join(app.config['UPLOAD_TRUTH_FOLDER'], file.filename))
+        return 'File uploaded successfully'
+
+
+@app.route('/upload_model', methods=['POST'])
+def upload_model():
+    UPLOAD_MODEL_FOLDER = 'uploads_model'
+    app.config['UPLOAD_MODEL_FOLDER'] = UPLOAD_MODEL_FOLDER
+
+    if 'file' not in request.files:
+        return 'No file part'
+
+    file = request.files['file']
+    if file.filename == '':
+        return 'No selected file'
+
+    if file:
+        file.save(os.path.join(app.config['UPLOAD_MODEL_FOLDER'], file.filename))
+        return 'Model uploaded successfully'
 
 
 if __name__ == '__main__':
