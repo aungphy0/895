@@ -10,6 +10,7 @@
     fill: #fff;
     stroke: #3182bd; /* Blue stroke for circles */
     stroke-width: 3px;
+    margin: 10px;
   }
   
   .node text {
@@ -23,5 +24,23 @@
     height: auto;
     background-color: #fafafa; /* Light background to make elements stand out */
     overflow: visible; /* Ensures no clipping */
-  }
+  }/* TreeChart.css */
+.link {
+  fill: none;
+  stroke: #bbb; /* Lighter stroke for links */
+  stroke-opacity: 0.8;
+  stroke-width: 2px;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: #3182bd; /* Blue stroke for circles */
+  stroke-width: 3px;
+}
+
+.node text {
+  font: 12px sans-serif;
+  pointer-events: none; /* Prevents text from interfering with click events */
+}
+
   

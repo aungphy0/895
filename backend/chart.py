@@ -4,9 +4,9 @@ import os
 import json
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "*"}})  # Apply CORS to all routes under /api/
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
-@app.route('/api/users', methods=['GET']) 
+@app.route('/api/users', methods=['GET'])
 def users():
     try:
         file_path = 'projectfiles/map_clsloc.txt'
@@ -14,17 +14,15 @@ def users():
         with open(file_path, 'r') as file:
             for line in file:
                 parts = line.strip().split()
-                number = int(parts[1])
-                class_data[number] = {
-                    'class_id': parts[0],
-                    'name': ' '.join(parts[2:])
-                }
+                class_id = parts[0]  # The class ID
+                name = ' '.join(parts[2:])  # Joining the rest as the class name
+                class_data[class_id] = name  # Mapping class ID to class name
 
         directory = 'dataset'
         image_class_mapping = {}
         for filename in os.listdir(directory):
             if filename.endswith('.jpeg'):
-                class_name = filename.split('_')[0]
+                class_name, _ = filename.split('_')  # Assuming class_name is before '_'
                 image_class_mapping[filename] = class_name
 
         tree_data_path = 'projectfiles/synset_relation_2012.json'
@@ -35,17 +33,14 @@ def users():
         with open(model_data_path, 'r') as file:
             model_data = json.load(file)
 
-
         predicted_classes = {}
-
         for i in range(len(model_data)):
             probabilities = model_data[i]['probabilities']
-
             max_index = probabilities.index(max(probabilities))
-
-            predicted_class = class_data[max_index + 1]['class_id']
-
-            predicted_classes[model_data[i]['name']] = predicted_class
+            # Assuming the index in probabilities corresponds directly to the serial number which is `index + 1`
+            # Fetch the corresponding class ID by finding the key with the matching value in class_data
+            predicted_class = [k for k, v in class_data.items() if v == str(max_index + 1)]
+            predicted_classes[model_data[i]['name']] = predicted_class[0] if predicted_class else None
 
         data = {
             'classData': class_data,
@@ -54,7 +49,6 @@ def users():
             'predictedClasses': predicted_classes,
             'treeData': tree_data
         }
-
 
         response = make_response(jsonify(data))
         response.headers['Access-Control-Allow-Origin'] = '*'

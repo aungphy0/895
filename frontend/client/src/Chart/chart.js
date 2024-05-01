@@ -33,7 +33,13 @@ const Chart = () => {
     return (
         <div id='chartContainer'>
             {data ? (
-                <TreeChart treeData={data.treeData} />
+                <TreeChart 
+                treeData={data.treeData}
+                classData={data.classData}
+                imageClassMapping={data.imageClassMapping}
+                predictedClasses={data.predictedClasses}
+                
+                />
 
             ) : (
                 <p>Loading...</p>

@@ -2,12 +2,12 @@ import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 import './TreeChart.css';
 
-const TreeChart = ({ treeData }) => {
+const TreeChart = ({ treeData, classData }) => {
   const ref = useRef();
 
   useEffect(() => {
     if (treeData) {
-        console.log(treeData);
+      console.log(classData);
       const hierarchyData = buildHierarchy(treeData);
       if (hierarchyData) {
         drawTree(hierarchyData);
@@ -18,42 +18,31 @@ const TreeChart = ({ treeData }) => {
   const buildHierarchy = (flatData) => {
     const nodes = new Map();
 
-    // First, create all nodes and add them to the map.
     flatData.forEach(item => {
-        if (!nodes.has(item.child)) {
-            nodes.set(item.child, { ...item, children: [] });
-        }
+      nodes.set(item.child, { ...item, children: [] });
     });
 
-    // Now, link all nodes to their parents.
     let root = null;
     flatData.forEach(item => {
-        if (item.parent) {
-            if (!nodes.has(item.parent)) {
-                nodes.set(item.parent, { child: item.parent, children: [] });
-            }
-            const parent = nodes.get(item.parent);
-            const child = nodes.get(item.child);
-            parent.children.push(child);
-        } else {
-            // This is potentially a root node as it has no parent.
-            root = nodes.get(item.child);
+      if (item.parent) {
+        if (!nodes.has(item.parent)) {
+          nodes.set(item.parent, { child: item.parent, children: [] });
         }
+        const parent = nodes.get(item.parent);
+        const child = nodes.get(item.child);
+        parent.children.push(child);
+      } else {
+        root = nodes.get(item.child);
+      }
     });
 
-    // In case there are multiple entries without a parent, we need to handle that:
-    // If root is still null, we'll find the first node without a parent reference in the dataset.
-    if (!root) {
-        root = [...nodes.values()].find(node => !flatData.some(item => item.child === node.parent));
-    }
-
-    return root;
-};
+    return root || [...nodes.values()].find(node => !flatData.some(item => item.child === node.parent));
+  };
 
   const drawTree = (rootData) => {
     const margin = { top: 50, right: 120, bottom: 50, left: 120 };
-    const width = 1000 - margin.left - margin.right;
-    const height = 800 - margin.top - margin.bottom;
+    const width = 1000 - margin.left - margin.right;  // Increased width
+    const height = 2000 - margin.top - margin.bottom;  // Adjusted height
 
     d3.select(ref.current).selectAll('*').remove();
 
@@ -65,26 +54,30 @@ const TreeChart = ({ treeData }) => {
     const g = svg.append('g');
 
     const zoom = d3.zoom()
-      .scaleExtent([0.5, 2])
+      .scaleExtent([0.1, 2])
       .on('zoom', (event) => g.attr('transform', event.transform));
     svg.call(zoom);
 
     const root = d3.hierarchy(rootData);
-    const treeLayout = d3.tree().size([width, height]);  // Adjust dimensions for top-to-bottom layout
+    const treeLayout = d3.tree()
+      .size([height, width])
+      .nodeSize([100, 300]);  // Increased node size to add more space between nodes
+
     treeLayout(root);
 
     g.selectAll(".link")
       .data(root.links())
       .join('path')
       .attr("class", "link")
-      .attr('d', d3.linkVertical().x(d => d.x).y(d => d.y))  // Adjust path for vertical layout
+      .attr('d', d3.linkVertical().x(d => d.x).y(d => d.y))
       .attr('stroke', '#ccc');
 
     const nodes = g.selectAll(".node")
       .data(root.descendants())
       .join('g')
       .attr("class", "node")
-      .attr("transform", d => `translate(${d.x}, ${d.y})`)  // Adjust positioning for vertical layout
+      .attr("id", d => d.data.child)
+      .attr("transform", d => `translate(${d.x}, ${d.y})`)
       .on('click', (event, d) => highlightPath(d, root, g));
 
     nodes.append('circle')
@@ -96,7 +89,7 @@ const TreeChart = ({ treeData }) => {
       .attr('dy', '0.35em')
       .attr('x', d => d.children ? -15 : 15)
       .attr('text-anchor', d => d.children ? 'end' : 'start')
-      .text(d => d.data.child);
+      .text(d => classData[d.data.child] || d.data.child);
   };
 
   const highlightPath = (node, root, g) => {
