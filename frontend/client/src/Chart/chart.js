@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import SankeyDiagram from './SankeyDiagram'; 
+// import SankeyDiagram from './SankeyDiagram'; 
 import CircleSankey from './CircleSankey';
 import ChordChart from './ChordChart';
+import TreeChart from './TreeChart';
 
 const Chart = () => {
     const [data, setData] = useState(null);
@@ -32,11 +33,8 @@ const Chart = () => {
     return (
         <div id='chartContainer'>
             {data ? (
-                <CircleSankey
-                    images={data.imageClassMapping}
-                    classMap={data.classData}
-                    modelData={data.modelData}
-                />
+                <TreeChart treeData={data.treeData} />
+
             ) : (
                 <p>Loading...</p>
             )}

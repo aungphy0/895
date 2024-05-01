@@ -6,7 +6,7 @@ import json
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "*"}})  # Apply CORS to all routes under /api/
 
-@app.route('/api/users', methods=['GET'])  # Make sure the route is prefixed with /api/
+@app.route('/api/users', methods=['GET']) 
 def users():
     try:
         file_path = 'projectfiles/map_clsloc.txt'
@@ -27,15 +27,34 @@ def users():
                 class_name = filename.split('_')[0]
                 image_class_mapping[filename] = class_name
 
+        tree_data_path = 'projectfiles/synset_relation_2012.json'
+        with open(tree_data_path, 'r') as file:
+            tree_data = json.load(file)
+
         model_data_path = 'projectfiles/Alexnet.json'
         with open(model_data_path, 'r') as file:
             model_data = json.load(file)
 
+
+        predicted_classes = {}
+
+        for i in range(len(model_data)):
+            probabilities = model_data[i]['probabilities']
+
+            max_index = probabilities.index(max(probabilities))
+
+            predicted_class = class_data[max_index + 1]['class_id']
+
+            predicted_classes[model_data[i]['name']] = predicted_class
+
         data = {
             'classData': class_data,
             'imageClassMapping': image_class_mapping,
-            'modelData': model_data
+            'modelData': model_data,
+            'predictedClasses': predicted_classes,
+            'treeData': tree_data
         }
+
 
         response = make_response(jsonify(data))
         response.headers['Access-Control-Allow-Origin'] = '*'
