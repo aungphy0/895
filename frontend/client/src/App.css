@@ -49,9 +49,10 @@
   margin-left: 10px; */
   align-items: center;
   justify-content: center;
+  position: absolute;
 
-  flex: 0 0 15%;
-  max-width: 15%;
+
+  width: 250px;
   height: 100vh;
   padding: 20px;
   background-color: #fff;
@@ -84,13 +85,13 @@
 }
 
 .detailview{
-  /* margin-left: 50px; */
-  margin-left: -150px;
+  margin-right: -40px;
+  margin-left: 60px;
 }
 
 .wideview{
-  /* margin-left: 50px; */
-  margin-left: -150px;
+  margin-right: -40px;
+  margin-left: 60px;
 }
 
 .input_data{
@@ -104,11 +105,10 @@
 }
 
 .RightArea{
-  /* margin-left: 20px; */
   flex: 1;
-  /* padding: 20px; */
+  padding: 20px;
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
 
@@ -121,7 +121,7 @@
   .LeftPanel {
     width: 100%;
     max-width: 100%;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
 
   .RightArea {
