@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 const MARGIN = { top: 60, right: 40, bottom: 30, left: 250 };
 
-const ParallelCoordinatePlot = ({data, width, height, FROM_VARIABLES, TO_VARIABLES, img, setImg }) => {
+const ParallelCoordinatePlot = ({data, width, height, FROM_VARIABLES, TO_VARIABLES, setImg }) => {
 
 
 
@@ -31,8 +31,6 @@ const ParallelCoordinatePlot = ({data, width, height, FROM_VARIABLES, TO_VARIABL
   });
 
 
-  const [imgUrl, setImgUrl] = useState();
-
   // Compute lines
   const lineGenerator = d3.line();
 
@@ -53,7 +51,7 @@ const ParallelCoordinatePlot = ({data, width, height, FROM_VARIABLES, TO_VARIABL
     
 
                                                                     //(d) => {console.log("clicked",
-    return <path key={i} d={d} stroke="skyblue" fill="none" onClick={(d) => { setImgUrl(series["name"]); setImg(imgUrl); console.log(imgUrl); }}
+    return <path key={i} d={d} stroke="skyblue" fill="none" onClick={(d) => { setImg(series["name"]); }}
                                                                     //  data[d['target']['__reactFiber$apr8x9io4sm']['alternate']['index']]['name']}
     />;
   });

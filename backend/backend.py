@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
 from flask import Flask, render_template
 
 from flask_cors import CORS
@@ -16,9 +16,9 @@ from torchvision import transforms
 
 app = Flask(__name__)
 CORS(app)
-#
-# UPLOAD_FOLDER = 'uploads'
-# app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+UPLOAD_FOLDER = 'uploads'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 #
 # UPLOAD_TRUTH_FOLDER = 'uploads_truth'
 # app.config['UPLOAD_TRUTH_FOLDER'] = UPLOAD_TRUTH_FOLDER
@@ -1131,9 +1131,6 @@ def get_classes():
 
 @app.route('/upload_images', methods=['POST'])
 def upload_images():
-    UPLOAD_FOLDER = 'uploads'
-    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
     if 'images' not in request.files:
         return 'No images part'
 
@@ -1177,6 +1174,15 @@ def upload_model():
         file.save(os.path.join(app.config['UPLOAD_MODEL_FOLDER'], file.filename))
         return 'Model uploaded successfully'
 
+@app.route('/images')
+def get_images():
+    image_files = os.listdir(app.config['UPLOAD_FOLDER'])
+    image_urls = [f'/uploads/{filename}' for filename in image_files]
+    return image_urls
+
+@app.route('/uploads/<path:filename>')
+def uploaded_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 if __name__ == '__main__':
     app.run(debug=True)

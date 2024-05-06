@@ -84,6 +84,17 @@ function App() {
       
   };
 
+  const [images, setImages] = useState([]);
+
+  const handleFetchImages = async () => {
+    try {
+      const response = await axios.get('http://localhost:5000/images');
+      setImages(response.data);
+    } catch (error) {
+      console.error('Error fetching images:', error);
+    }
+  };
+
   // ################  data folder input  ############### 
   // const [selectedFiles, setselectedFiles] = useState([]);
   // const [file, setFile] = useState(null);
@@ -197,7 +208,7 @@ function App() {
         {/* for models selction to show data */}
         <div className="ModelSelect">
           <label> Models </label> <br/><br/>
-          <select onChange={handleModelChange} value={selectedModel}>
+          <select onChange={handleModelChange} onClick={handleFetchImages} value={selectedModel}>
               <option value="">Select Model</option>
               <option value="fetchAlex">AlexNet</option>
               <option value="fetchMobile">MobileNet</option>
@@ -234,13 +245,15 @@ function App() {
             <span>{value2}</span>
         </div> */}
         <div>
-          <img src={ img === "./default-placeholder.png" ? './default-placeholder.png' : `./dataset/${img}`}
+          <img src={ img === "./default-placeholder.png" ? './default-placeholder.png' : `http://localhost:5000/uploads/${img}`}
                alt={"pic"}
                style={{ width: '200px', height: 'auto' }}
           />
+          {/* <h5> {img} </h5> */}
         </div>
       </div>
-
+      
+      <div className="RightArea">
         <div className='detailview'>
           <BrowserRouter>
             <Routes>
@@ -253,7 +266,6 @@ function App() {
                     height={400}
                     FROM_VARIABLES={value1}
                     TO_VARIABLES={value2}
-                    img = {img}
                     setImg = {setImg}
                   />
                 }
@@ -264,7 +276,7 @@ function App() {
           <h1> {`${selectedModel.slice(5)}`.concat(`${selectedModel ? "Net" : ""}`)} </h1>
         </div>
 
-        
+      
         <div className='wideview'>
           <BrowserRouter>
             <Routes>
@@ -285,6 +297,7 @@ function App() {
             </Routes>
           </BrowserRouter>
         </div>
+      </div>
     </div>
   );
 }
