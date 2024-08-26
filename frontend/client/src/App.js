@@ -19,29 +19,29 @@ function App() {
   
   const [ img, setImg ] = useState('./default-placeholder.png');
 
-  // const [ selectedRunModel, setSelectedRunModel ] = useState("");
+  const [ selectedRunModel, setSelectedRunModel ] = useState("");
 
-  // useEffect(() => {
-  //   const runData = async () => {
-  //      try {
-  //        const response = await axios.get(`http://127.0.0.1:5000/${selectedRunModel}`, {
-  //             params: {
-  //                data: './dataset',
-  //                truth: './truth.json',
-  //             },
-  //        });
-  //        console.log("Running!");
-  //       //  setPData(response.data || []);
-  //       if(response){
-  //         console.log("Done!");
-  //       }
-  //      } catch (error) {
-  //        console.error('Error fetching data:', error);
-  //      }
-  //   };
+  useEffect(() => {
+    const runData = async () => {
+       try {
+         const response = await axios.get(`http://127.0.0.1:5000/${selectedRunModel}`, {
+              params: {
+                 data: './dataset',
+                 truth: './truth.json',
+              },
+         });
+         console.log("Running!");
+        //  setPData(response.data || []);
+        if(response){
+          console.log("Done!");
+        }
+       } catch (error) {
+         console.error('Error fetching data:', error);
+       }
+    };
 
-  //   runData();
-  // }, [selectedRunModel]);
+    runData();
+  }, [selectedRunModel]);
 
 
 
@@ -59,11 +59,11 @@ function App() {
   }, [selectedModel]);
 
 
-  // const handleRunModelChange = (event) => {
-  //   setSelectedRunModel(event.target.value);
-  //   // handleFolderSubmit();
-  //   // handleFileSubmit();
-  // };
+  const handleRunModelChange = (event) => {
+    setSelectedRunModel(event.target.value);
+    // handleFolderSubmit();
+    // handleFileSubmit();
+  };
 
   const handleModelChange = (event) => {
     setSelectedModel(event.target.value);
@@ -190,7 +190,7 @@ function App() {
         {/* <button type="submit">Upload</button> */}
         <ModelUpload />
         {/* for models selction to run model */}
-        {/* <div className="ModelSelect">
+        <div className="ModelSelect">
           <label> Run Models </label> <br/><br/>
           <select onChange={handleRunModelChange} value={selectedRunModel}>
               <option value="">Select Model</option>
@@ -201,7 +201,7 @@ function App() {
               <option value="runSqueezenet1_1">SqueezeNet1_1</option>
               <option value="runMnasnet0_5">Mnasnet0_5</option>
           </select>
-        </div> */}
+        </div>
         {/* for models selction to run model */}
         
 
@@ -230,7 +230,7 @@ function App() {
               //onChange={(e) => handleSliderChange(1, e)}
               onChange={handleSliderChange}
             />
-            <span>{value1}</span>
+            <div>{value1+1} - {value2}</div>
         </div>
         
         {/* <div className="ToRange">
@@ -245,7 +245,7 @@ function App() {
             <span>{value2}</span>
         </div> */}
         <div>
-          <img src={ img === "./default-placeholder.png" ? './default-placeholder.png' : `http://localhost:5000/uploads/${img}`}
+          <img src={ img === "./default-placeholder.png" ? './default-placeholder.png' : `http://127.0.0.1:5000/uploads/${img}`}
                alt={"pic"}
                style={{ width: '200px', height: 'auto' }}
           />

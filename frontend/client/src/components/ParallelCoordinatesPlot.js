@@ -11,7 +11,7 @@ const ParallelCoordinatePlot = ({data, width, height, FROM_VARIABLES, TO_VARIABL
   const boundsWidth = width - MARGIN.right - MARGIN.left;
   const boundsHeight = height - MARGIN.top - MARGIN.bottom;
   // const variables = Array.from({length: VARIABLES}, (_, index) => index); //Creates an array from 0 to VARIABLES
-  const v = Array.from({length: TO_VARIABLES}, (_, index) => index);
+  const v = Array.from({length: TO_VARIABLES}, (_, index) => index + 1);
   const variables = v.slice(FROM_VARIABLES, TO_VARIABLES + 1);
 
   // Compute a xScale: spread all Y axis along the chart width
